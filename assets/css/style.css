@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-    background: url(http://localhost/chancellor/assets/imgs/nav-bg.png) no-repeat center;
+    background: url(/assets/imgs/nav-bg.png) no-repeat center;
     background-size: contain;
     height: 215px;
     margin-top: -50px;
@@ -399,8 +399,6 @@ body {
 }
 
 /* footer Section by Robin */
-
-
 .footer {
     background: url('/assets/imgs/footer-bg.png') no-repeat center/cover;
     padding: 80px 0;
@@ -408,11 +406,6 @@ body {
     color: black;
 }
 
-/* Footer Overlay to Adjust Content Position */
-
-
-
-/* Footer Main Container */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -422,11 +415,10 @@ body {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    margin-top: 550px;
+    margin-top: 580px;
     font-family: DIN Pro;
 }
 
-/* Logo Styling (Top Left) */
 .footer-logo {
     position: absolute;
     top: -80px;
@@ -437,7 +429,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: #D82127;
-    font-family: 'Copperplate Gothic Bold';
+    font-family: DIN Pro;
     text-transform: uppercase;
 }
 
@@ -448,18 +440,17 @@ body {
     font-weight: normal;
 }
 
-/* Each Section Takes Exact Space */
 .footer-column {
     flex: 1;
     min-width: 250px;
+    font-family: DIN Pro;
+
 }
 
-/* Corporate Office Aligned to Left */
 .corporate-office {
     text-align: left;
 }
 
-/* Quick Links & Legal Sections Centered */
 .quick-links {
     text-align: center;
 }
@@ -468,15 +459,15 @@ body {
     text-align: right;
 }
 
-/* Section Titles */
 .footer-title {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-family: DIN Pro;
+
 }
 
-/* List Styling */
 .footer-column ul {
     list-style: none;
     padding: 0;
@@ -495,7 +486,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: #D82127; /* Matching the theme */
+    color: #D82127; 
 }
 
 /* Responsive Design */
