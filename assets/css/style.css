@@ -1,0 +1,302 @@
+body {
+    background-color: #080808;
+    color: white;
+}
+.navbar {
+    background: url(http://localhost/chancellor/assets/imgs/nav-bg.png) no-repeat center;
+    background-size: contain;
+    height: 215px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'poppins';
+    margin-left: 45px;
+    padding-left: 75px !important;
+    margin-bottom: 35px;
+}
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.right-menu {
+    margin-left: 95px;
+}
+.top-bg {
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    left: 15%;
+    margin-top: -230px;
+}
+.hero-section {
+    position: relative;
+    background: url('/assets/imgs/background-pattern.png') no-repeat center;
+    background-size: cover;
+    padding: 80px 0;
+}
+.bg2 img {
+    width: 25%;
+    position: absolute;
+    z-index: 1;
+    left: 75%;
+    top: 10%;
+}
+.hero-content {
+    max-width: 575px;
+}
+.hero-title {
+    font-family: 'Copperplate Gothic Std 29 AB';
+    color: #E5AA11;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-top: -20px;
+}
+
+.hero-title span {
+    font-size: 65px;
+    margin-top: -12px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Oswald';
+}
+.hero-btn {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oswald';
+    background-color: #E5AA11;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+.food-image {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-left: 14%;
+}
+
+/* Section Styles */
+.brand-section::before{ 
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw; 
+    background-size: 180% 200px;
+    background-position: 50% 0%; 
+    transform: rotateY(180deg); background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z" fill="%23080808"/></svg>'); 
+    }
+.brand-section {
+        position: relative;
+        background: #222;
+        padding: 200px 20px 150px 20px;
+        overflow: hidden;
+    }
+
+    /* Title Section */
+    .brand-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 600;
+        font-family: 'Copperplate Gothic Std 29 AB';
+        color: #D82127;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+    }
+
+    .brand-title span {
+        font-size: 65px;
+        margin-top: -12px;
+    }
+
+    .brand-title::before {
+        content: "";
+        width: 18%;
+        height: 25px;
+        background-image: url(http://localhost/Chancellor/assets/imgs/left-arrow.png);
+        background-repeat: no-repeat;
+        margin: 0 15px;
+        display: inline-block;
+    }
+    .brand-title::after {
+        content: "";
+        width: 17%;
+        height: 25px;
+        background-image: url(http://localhost/Chancellor/assets/imgs/right-arrow.png);
+        background-repeat: no-repeat;
+        margin: 0 0 0 75px;
+    }
+
+    /* Content Box */
+    .brand-content {
+        max-width: 75%;
+        margin: 20px auto;
+        padding: 40px;
+        border: 2px solid gold;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Oswald';
+        line-height: 1.6;
+        letter-spacing: .1em;
+        margin-top: 80px;
+    }
+
+    .products-section::before{ 
+        content:'';
+        font-family:'shape divider from ShapeDividers.com';
+        position: absolute;
+        z-index: 3;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        bottom: -0.1vw;
+        left: -0.1vw;
+        right: -0.1vw;
+        top: -0.1vw; 
+        background-size: 180% 200px; 
+        background-position: 50% 0%; 
+        transform: rotateY(180deg); 
+        background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z" fill="%23222222"/></svg>'); 
+    }
+
+    .products-section {
+        position: relative;
+        background: #000000;
+        padding: 200px 20px;
+        overflow: hidden;
+    }
+
+    .products-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 600;
+        font-family: 'Copperplate Gothic Std 29 AB';
+        color: #D82127;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+    }
+
+    .products-title span {
+        font-size: 65px;
+        margin-top: -12px;
+    }
+
+    .products-title::before {
+        content: "";
+        width: 18%;
+        height: 25px;
+        background-image: url(http://localhost/Chancellor/assets/imgs/left-arrow.png);
+        background-repeat: no-repeat;
+        margin: 0 15px;
+        display: inline-block;
+    }
+    .products-title::after {
+        content: "";
+        width: 17%;
+        height: 25px;
+        background-image: url(http://localhost/Chancellor/assets/imgs/right-arrow.png);
+        background-repeat: no-repeat;
+        margin: 0 0 0 75px;
+    }
+
+    .kd-content-bg {
+        margin: 75px 0 0 0;
+        padding: 50px 50px;
+        border: 1px solid #501A1B;
+        border-radius: 10px;
+        background: linear-gradient(104.97deg, rgba(216, 33, 39, 0.3) 3.84%, rgba(31, 31, 31, 0.3) 95.4%);
+    }
+
+    .kd-content-bg p {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'oswald';
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+    }
+
+    .so-content-bg {
+        margin: 75px 0 0 0;
+        padding: 50px 50px;
+        border: 1px solid #501A1B;
+        border-radius: 10px;
+        background: linear-gradient(104.97deg, rgba(1, 160, 76, 0.3) 3.84%, rgba(31, 31, 31, 0.3) 95.4%);
+    }
+
+    .so-content-bg p {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'oswald';
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+    }
+
+    .v-content-bg {
+        margin: 75px 0 0 0;
+        padding: 50px 50px;
+        border: 1px solid #501A1B;
+        border-radius: 10px;
+        background: linear-gradient(104.97deg, rgba(35, 143, 233, 0.3) 3.84%, rgba(31, 31, 31, 0.3) 95.4%);
+    }
+
+    .v-content-bg p {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'oswald';
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+    }
+
+    .mo-content-bg {
+        margin: 75px 0 0 0;
+        padding: 50px 50px;
+        border: 1px solid #501A1B;
+        border-radius: 10px;
+        background: linear-gradient(104.97deg, rgba(242, 100, 0, 0.3) 3.84%, rgba(31, 31, 31, 0.3) 95.4%);
+    }
+
+    .mo-content-bg p {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'oswald';
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+    }
