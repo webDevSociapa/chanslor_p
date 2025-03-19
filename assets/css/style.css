@@ -60,7 +60,7 @@ body {
 
 .hero-section {
     position: relative;
-    background: url('/assets/imgs/background-pattern.png') no-repeat center;
+    background: url('/assets/imgs/mainBanner1.jpg') no-repeat center;
     background-size: cover;
     padding: 80px 0;
 }
@@ -321,8 +321,9 @@ body {
 .contact-container {
     display: flex;
     justify-content: center;
+    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     align-items: center; /* Ensures vertical alignment */
-    margin-top: 100px !important;
+    height: 600px;
 }
 
 .contact-section {
