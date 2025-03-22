@@ -52,7 +52,9 @@ body {
     color: #F4991A !important;
 }
 
-.products-title{
+.product-bg{}
+
+/* .products-title{
     font-family: Copperplate Gothic Bold;
     color: #D82127;
 }
@@ -60,14 +62,15 @@ body {
 .products-desc{
     margin: 0px 530px;
     padding: 0px 20px;
-}
+} */
 
 .products-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 50px;
     max-width: 1200px;
+    margin-top: 10px;
     margin: auto;
 }
 
