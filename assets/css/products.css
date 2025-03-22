@@ -1,0 +1,145 @@
+body {
+    background-color: #080808;
+    color: white;
+}
+
+.navbar {
+    background: #171717;
+    background-size: contain;
+    height: 215px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'poppins';
+    margin-left: 45px;
+    padding-left: 75px !important;
+    margin-bottom: 35px;
+}
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 80px 20px;
+    font: 100;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #F4991A !important;
+}
+
+.product-bg{}
+
+/* .products-title{
+    font-family: Copperplate Gothic Bold;
+    color: #D82127;
+}
+
+.products-desc{
+    margin: 0px 530px;
+    padding: 0px 20px;
+} */
+
+.products-section {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 50px;
+    max-width: 1200px;
+    margin-top: 10px;
+    margin: auto;
+}
+
+/* Left Side: Content Grid */
+.products-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 50%;
+}
+
+/* Product Box Styling */
+.product-box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Unique Class Styles */
+/* .box-one { background-color: rgba(255, 255, 255, 0.1); }
+.box-two { background-color: rgba(255, 255, 255, 0.15); }
+.box-three { background-color: rgba(255, 255, 255, 0.2); }
+.box-four { background-color: rgba(255, 255, 255, 0.25); } */
+
+.box-two {
+    margin-top: 30px;
+    
+}
+
+.box-four{
+    margin-top: 30px;
+}
+/* Product Box Images */
+.product-box img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Heading & Text */
+.product-box h2 {
+    color: red;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-box p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Right Side: Image */
+.products-image img {
+    position: absolute;
+    right: 0;
+    max-width: 450px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .products-content {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .products-image img {
+        width: 80%;
+        margin-top: 30px;
+    }
+}
