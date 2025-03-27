@@ -4,11 +4,13 @@ body {
 }
 
 .navbar {
-    background: #171717;
+    background: url(/assets/imgs/nav-bg.png) no-repeat center;
     background-size: contain;
     height: 215px;
     margin-top: -50px;
     position: relative;
+    background-size: 100% 100%;
+
     z-index: 5;
 }
 
@@ -28,8 +30,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 80px 20px;
-    font: 100;
+    padding: 10px 20px;
+    
 }
 
 .navbar-brand {
@@ -51,6 +53,90 @@ body {
 .navbar-nav .nav-link.show {
     color: #F4991A !important;
 }
+
+.sidebar-menu {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 250px;
+}
+
+.sidebar-menu .offcanvas-body {
+    padding: 20px;
+}
+
+.sidebar-menu .list-group-item {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.sidebar-menu .list-group-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-menu .list-group-item:hover {
+    background: #F4991A;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.right-menu {
+    margin-left: 95px;
+}
+
+
+@media (max-width: 478px) {
+    /* Adjust Navbar Position */
+    .navbar-container {
+        margin-top: -40px;
+        margin-left: 0;
+    }
+
+    .navbar {
+        margin-top: -85px;
+    }
+
+    /* Reduce Menu Button (Toggler) Size */
+    .navbar-toggler {
+        border: none;
+        padding: 6px; /* Reduce padding for a smaller button */
+    }
+
+    .navbar-toggler-icon {
+        width: 22px !important; /* Reduce icon size */
+        height: 22px !important;
+        filter: invert(1); /* Make it white */
+    }
+
+    /* Center Logo Properly */
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Move Toggler Button to the Right */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 40px;
+    }
+}
+
+
+
+
+
 
 .about-product {
     background: #090909;
@@ -317,8 +403,10 @@ body {
     background-color: #D5E8F7;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    width: 350px;
+    max-width: 320px;
     color: #fff;
 }
 
@@ -326,8 +414,10 @@ body {
     background-color: #F9CCA7;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    width: 350px;
+    max-width: 320px;
     color: #fff;
 }
 
@@ -335,8 +425,10 @@ body {
     background-color: #9BCC5B;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    width: 350px;
+    max-width: 320px;
     color: #fff;
 }
 
@@ -344,8 +436,10 @@ body {
     background-color: #D5E8F7;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    width: 350px;
+    max-width: 320px;
     color: #fff;
 }
 
@@ -574,6 +668,7 @@ body {
     font-family: DIN Pro;
 
 }
+
 
 .corporate-office {
     text-align: left;
