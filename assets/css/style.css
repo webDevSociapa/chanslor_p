@@ -7,6 +7,7 @@ body {
     background: url(/assets/imgs/nav-bg.png) no-repeat center;
     background-size: contain;
     height: 215px;
+    background-size: 100% 100%;
     margin-top: -50px;
     position: relative;
     z-index: 5;
@@ -29,6 +30,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 10px 20px;
+    
 }
 
 .navbar-brand {
@@ -46,10 +48,47 @@ body {
     justify-content: space-between;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
     color: #F4991A !important;
 }
 
+.sidebar-menu {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 250px;
+}
+
+.sidebar-menu .offcanvas-body {
+    padding: 20px;
+}
+
+.sidebar-menu .list-group-item {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.sidebar-menu .list-group-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-menu .list-group-item:hover {
+    background: #F4991A;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
 .right-menu {
     margin-left: 95px;
 }
@@ -62,23 +101,65 @@ body {
     margin-top: -230px;
 }
 
-.hero-section {
-    position: relative;
-    background: url('/assets/imgs/background-pattern.png') no-repeat center;
-    background-size: cover;
-    padding: 80px 0;
+
+@media (max-width: 478px) {
+    /* Adjust Navbar Position */
+    .navbar-container {
+        margin-top: -40px;
+        margin-left: 0;
+    }
+
+    .navbar {
+        margin-top: -85px;
+    }
+
+    /* Reduce Menu Button (Toggler) Size */
+    .navbar-toggler {
+        border: none;
+        padding: 6px; /* Reduce padding for a smaller button */
+    }
+
+    .navbar-toggler-icon {
+        width: 22px !important; /* Reduce icon size */
+        height: 22px !important;
+        filter: invert(1); /* Make it white */
+    }
+
+    /* Center Logo Properly */
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Move Toggler Button to the Right */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 40px;
+    }
 }
 
-.bg2 img {
-    width: 25%;
-    position: absolute;
-    z-index: 1;
-    left: 75%;
-    top: 10%;
+
+
+
+
+/* Hero Section */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .hero-content {
-    max-width: 575px;
+    max-width: 50%;
+    color: white;
+    z-index: 2;
 }
 
 .hero-title {
@@ -110,16 +191,147 @@ body {
     padding: 10px 35px;
     border-radius: 20px;
     color: #ffffff;
+    cursor: pointer;
 }
 
-.food-image {
-    max-width: 100%;
+/* BACKGROUND SLIDER */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.bg1 { background-image: url('/assets/imgs/kachi-dhani.png'); }
+.bg2 { background-image: url('/assets/imgs/kachi-dhani.png'); }
+.bg3 { background-image: url('/assets/imgs/kachi-dhani.png'); }
+.bg4 { background-image: url('/assets/imgs/kachi-dhani.png'); }
+
+/* NAVIGATION DOTS */
+.navigation {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* RADIO BUTTONS FOR MANUAL SLIDE CONTROL */
+input[type="radio"] {
+    display: none;
+}
+
+/* SLIDE POSITIONING */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+#slide4:checked ~ .slides { transform: translateX(-300%); }
+
+.navigation label:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* AUTO SLIDE WITHOUT ANIMATION *
+
+
+/* FIXED CONTENT */
+.container {
     position: relative;
     z-index: 2;
-    margin-left: 14%;
+    text-align: left;
+    color: #fff;
 }
 
-/* Section Styles */
+.hero-title {
+    font-size: 3rem;
+    color: #E5AA11;
+    font-weight: 700;
+}
+
+.hero-btn {
+    font-size: 18px;
+    background-color: #E5AA11;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* NAVIGATION DOTS */
+.navigation {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* RADIO BUTTONS FOR MANUAL SLIDE CONTROL */
+input[type="radio"] {
+    display: none;
+}
+
+/* SLIDE POSITIONING */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+#slide4:checked ~ .slides { transform: translateX(-300%); }
+
+.navigation label:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* AUTO SLIDE WITHOUT ANIMATION */
+@keyframes autoSlide {
+    0%, 25% { transform: translateX(0%); }
+    26%, 50% { transform: translateX(-100%); }
+    51%, 75% { transform: translateX(-200%); }
+    76%, 100% { transform: translateX(-300%); }
+}
+	
+.slides {
+    animation: autoSlide 6s linear infinite;
+}
+
+/* Brand Section Styles */
+
 .brand-section::before {
     content: '';
     font-family: 'shape divider from ShapeDividers.com';
@@ -144,58 +356,133 @@ body {
     overflow: hidden;
 }
 
-/* Title Section */
 .brand-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    flex-wrap: nowrap; /* Prevents text from breaking */
+    font-size: clamp(24px, 5vw, 50px);
     font-weight: 600;
     font-family: 'Copperplate Gothic Std 29 AB';
     color: #D82127;
     text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: 0.3rem;
+    white-space: nowrap; /* Ensures the text remains in one line */
+    text-align: center;
+    width: 100%; /* Ensures proper spacing */
 }
 
 .brand-title span {
-    font-size: 65px;
-    margin-top: -12px;
+    font-size: clamp(28px, 6vw, 65px);
+    margin-top: -8px;
+}
+
+.brand-title::before,
+.brand-title::after {
+    content: "";
+    height: 25px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
 }
 
 .brand-title::before {
-    content: "";
     width: 18%;
-    height: 25px;
     background-image: url(http://localhost/Chancellor/assets/imgs/left-arrow.png);
-    background-repeat: no-repeat;
-    margin: 0 15px;
-    display: inline-block;
+    margin-right: 10px;
 }
 
 .brand-title::after {
-    content: "";
     width: 17%;
-    height: 25px;
     background-image: url(http://localhost/Chancellor/assets/imgs/right-arrow.png);
-    background-repeat: no-repeat;
-    margin: 0 0 0 75px;
+    margin-left: 10px;
 }
 
 /* Content Box */
 .brand-content {
-    max-width: 75%;
+    max-width: 85%;
     margin: 20px auto;
-    padding: 40px;
+    padding: clamp(20px, 4vw, 40px);
     border: 2px solid gold;
     border-radius: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(14px, 2.2vw, 24px);
     font-weight: 500;
     font-family: 'Oswald';
     line-height: 1.6;
-    letter-spacing: .1em;
-    margin-top: 80px;
+    letter-spacing: .08em;
+    margin-top: clamp(40px, 10vw, 80px);
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .brand-title {
+        font-size: clamp(24px, 5vw, 40px);
+    }
+    .brand-title span {
+        font-size: clamp(30px, 6vw, 55px);
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: clamp(22px, 4vw, 36px);
+        letter-spacing: .2rem;
+    }
+    .brand-title span {
+        font-size: clamp(26px, 5vw, 50px);
+        margin-top: -6px;
+    }
+    .brand-content {
+        max-width: 90%;
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-title {
+        font-size: 20px;
+        letter-spacing: 0.1rem;
+    }
+    .brand-title span {
+        font-size: 26px;
+    }
+    .brand-title::before,
+    .brand-title::after {
+        display: none;
+    }
+    .brand-content {
+        max-width: 95%;
+        padding: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .brand-title {
+        font-size: 20px;
+        letter-spacing: .1rem;
+    }
+    .brand-title span {
+        font-size: 28px;
+    }
+    .brand-content {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*  Product Sction */
 
 .products-section::before {
     content: '';
@@ -321,6 +608,97 @@ body {
     text-transform: capitalize;
 }
 
+@media (max-width: 768px) {
+    .products-title {
+        font-size: 30px;
+        letter-spacing: 0.2rem;
+    }
+
+    .products-title span {
+        font-size: 40px;
+        margin-top: -5px;
+    }
+
+    .products-title::before,
+    .products-title::after {
+        display: none;
+    }
+
+    .kd-content-bg,
+    .so-content-bg,
+    .v-content-bg,
+    .mo-content-bg {
+        margin: 30px 0;
+        padding: 30px;
+    }
+
+    .kd-content-bg p,
+    .so-content-bg p,
+    .v-content-bg p,
+    .mo-content-bg p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-title {
+        font-size: 24px;
+        letter-spacing: 0.1rem;
+    }
+
+    .products-title span {
+        font-size: 32px;
+    }
+
+    .kd-content-bg,
+    .so-content-bg,
+    .v-content-bg,
+    .mo-content-bg {
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    .kd-content-bg p,
+    .so-content-bg p,
+    .v-content-bg p,
+    .mo-content-bg p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 420px) {
+    .products-title {
+        font-size: 20px;
+        letter-spacing: 0.1rem;
+    }
+
+    .products-title span {
+        font-size: 28px;
+    }
+
+    .kd-content-bg,
+    .so-content-bg,
+    .v-content-bg,
+    .mo-content-bg {
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .kd-content-bg p,
+    .so-content-bg p,
+    .v-content-bg p,
+    .mo-content-bg p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
 /* contact section by Robin */
 .contact-container {
     display: flex;
@@ -403,12 +781,23 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* footer Section by Robin */
 .footer {
     background: url('/assets/imgs/footer-bg.png') no-repeat center/cover;
     padding: 80px 0;
     position: relative;
     color: black;
+    margin-top: -120px;
 }
 
 .footer-container {
@@ -416,7 +805,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
@@ -460,9 +849,11 @@ body {
     text-align: center;
 }
 
+
 .legal {
     text-align: right;
 }
+
 
 .footer-title {
     font-size: 20px;
@@ -470,13 +861,13 @@ body {
     text-transform: uppercase;
     margin-bottom: 15px;
     font-family: DIN Pro;
-
 }
 
 .footer-column ul {
     list-style: none;
     padding: 0;
 }
+
 
 .footer-column ul li {
     margin-bottom: 10px;
@@ -491,7 +882,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: #D82127; 
+    color: #D82127;
 }
 
 /* Responsive Design */
@@ -502,8 +893,12 @@ body {
     }
 
     .footer-column {
-        margin-bottom: 20px;
+        margin-bottom: -120px;
         text-align: center;
+    }
+
+    .quick-links {
+        margin-bottom: -20px;
     }
 
     .legal {
@@ -518,5 +913,9 @@ body {
         margin-bottom: 20px;
     }
 }
+
+
+
+
 
 
