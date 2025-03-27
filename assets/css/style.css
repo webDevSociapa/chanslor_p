@@ -219,10 +219,10 @@ body {
     background-repeat: no-repeat;
 }
 
-.bg1 { background-image: url('/assets/imgs/kachi-dhani.png'); }
-.bg2 { background-image: url('/assets/imgs/kachi-dhani.png'); }
-.bg3 { background-image: url('/assets/imgs/kachi-dhani.png'); }
-.bg4 { background-image: url('/assets/imgs/kachi-dhani.png'); }
+.bg1 { background-image: url('/assets/imgs/heroBanner1.jpg'); }
+.bg2 { background-image: url('/assets/imgs/heroBanner2.jpg'); }
+.bg3 { background-image: url('/assets/imgs/heroBanner3.jpg'); }
+.bg4 { background-image: url('/assets/imgs/heroBanner4.jpg'); }
 
 /* NAVIGATION DOTS */
 .navigation {
@@ -267,6 +267,7 @@ input[type="radio"] {
     z-index: 2;
     text-align: left;
     color: #fff;
+    background-size: 100% 100%
 }
 
 .hero-title {

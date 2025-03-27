@@ -9,8 +9,6 @@ body {
     height: 215px;
     margin-top: -50px;
     position: relative;
-    background-size: 100% 100%;
-
     z-index: 5;
 }
 
