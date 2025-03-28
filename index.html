@@ -27,7 +27,7 @@
             src: url('assets/fonts/Copperplate-Gothic-Std-29-AB.woff') format('woff');
         }
     </style>
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -38,28 +38,37 @@
                 aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 </ul>
-    
+
                 <!-- Logo (Centered in Mobile) -->
                 <a class="navbar-brand mx-auto" href="#">
                     <img src="assets/imgs/chancellor-logo.png" alt="logo">
                 </a>
-    
+
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
+                            <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
+                            <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
+                            <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-   
+
     <!-- Offcanvas Sidebar -->
     <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
@@ -77,52 +86,91 @@
             </ul>
         </div>
     </div>
-    
 
-    <section class="hero-section">
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
 
-                <div class="slide bg1">
-                    <img src= "/assets/imgs/heroBanner1.jpg"/>
+    <!-- Hero Section -->
+
+
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide" style="background: url('/assets/imgs/heroBanner4.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Robust Flavor, Wellness Boost</h2>
+                    <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health and taste.</p>
+                    <button class="hero-btn">All Products</button>
                 </div>
-                <div class="slide bg2">
-                    <img src= "/assets/imgs/heroBanner2.jpg"/>
 
-                </div>
-                <div class="slide bg3">
-                    <img src= "/assets/imgs/heroBanner3.jpg"/>
-
-                </div>
-                <div class="slide bg4">
-                    <img src= "/assets/imgs/heroBanner4.jpg"/>
+            </div>
+            <div class="slide" style="background: url('/assets/imgs/heroBanner1.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Tradition in Every Drop</h2>
+                    <p>Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking.</p>
+                    <button class="hero-btn">All Products</button>
 
                 </div>
             </div>
-        </div>
+            <div class="slide" style="background: url('/assets/imgs/heroBanner2.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Fluffier Rotis, Crispy Delights!</h2>
+                    <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier fried snacks.</p>
+                    <button class="hero-btn">All Products</button>
 
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title"><span>R</span>obust flavor with a boost<br> of wellness</h1>
-                <p class="mt-5 mb-5">Bring the rich, authentic taste of tradition to your cooking with Vanaspati Oil. 
-                    With a heritage rooted in trust and ancient expertise, every dish becomes a royal experience. 
-                    Indulge in the luxurious flavor of perfect meals.
-                </p>
-                <button class="hero-btn">All Products</button>
+                </div>
+            </div>
+            <div class="slide" style="background: url('/assets/imgs/heroBanner4.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Light, Healthy, Versatile</h2>
+                    <p>Enriched with Omega-3 and Vitamin E, this refined soybean oil is perfect for daily cooking.</p>
+                    <button class="hero-btn">All Products</button>
+                </div>
             </div>
         </div>
+        <div class="navigation"></div>
+    </div>
 
-        <div class="navigation">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-            <label for="slide4"></label>
-        </div>
-    </section>
+    <script>
+        const slides = document.querySelector('.slides');
+        const dotsContainer = document.querySelector('.navigation');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let index = 0;
+        
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.dataset.index = i;
+                dotsContainer.appendChild(dot);
+            }
+            dotsContainer.children[0].classList.add('active');
+        }
+        
+        function updateSlide() {
+            slides.style.transform = `translateX(-${index * 100}vw)`;
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+            dotsContainer.children[index].classList.add('active');
+        }
+        
+        function autoSlide() {
+            index = (index + 1) % totalSlides;
+            updateSlide();
+        }
+        
+        dotsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('dot')) {
+                index = parseInt(e.target.dataset.index);
+                updateSlide();
+            }
+        });
+        
+        createDots();
+        setInterval(autoSlide, 3000);
+    </script>
+
+
+
+
+
+
 
     <!-- Brand Section -->
     <section class="brand-section">
@@ -194,7 +242,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                <img class="w-75" src="assets/imgs/productNew4.png" alt="kachi dhani">
+                    <img class="w-75" src="assets/imgs/productNew4.png" alt="kachi dhani">
                 </div>
             </div>
         </div>
@@ -202,7 +250,7 @@
 
     <!-- video section -->
     <section>
-        <img class="w-100" src="assets/imgs/video-top-banner.jpg" alt="video banner">
+        <img class="w-100" src="assets/imgs/new-video-banner.jpg" alt="video banner">
     </section>
 
     <!-- contact section -->
@@ -266,7 +314,7 @@
     <!-- footer -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

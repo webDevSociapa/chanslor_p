@@ -1,163 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Auto Slider</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { overflow-x: hidden; }
+        
+        /* Fullscreen slider */
+        .slider-container { 
+            position: relative; 
+            width: 100vw; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+        .slides { 
+            display: flex; 
+            transition: transform 0.5s ease-in-out; 
+            width: 400%; /* Adjust based on number of slides */
+        }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+        .slide { 
+            min-width: 100vw; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 5vw; 
+            color: #fff; 
+            flex-wrap: wrap;
+        }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+        .slide-content {
+            width: 50%;
+            max-width: 600px;
+            color: #FFC107; /* Yellow text */
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+        .slide-content h2 { 
+            font-size: 3vw; 
+            margin-bottom: 10px; 
+        }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+        .slide-content p { 
+            font-size: 1.5vw; 
+            line-height: 1.5; 
+        }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+        .slide img { 
+            width: 50%;
+            height: auto; 
+            max-height: 90vh;
+        }
 
+        /* Navigation Dots */
+        .navigation { 
+            position: absolute; 
+            bottom: 10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex; 
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+        .dot { 
+            width: 12px; 
+            height: 12px; 
+            margin: 5px; 
+            border-radius: 50%; 
+            background: gray; 
+            cursor: pointer; 
+        }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+        .dot.active { 
+            background: #FFC107; 
+        }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+        /* 📱 Responsive Styles */
+        @media (max-width: 1024px) { 
+            .slide { flex-direction: column; text-align: center; justify-content: center; }
+            .slide-content { width: 80%; order: 2; }
+            .slide img { width: 80%; max-height: 40vh; order: 1; }
+            .slide-content h2 { font-size: 5vw; }
+            .slide-content p { font-size: 3vw; }
+        }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
+        @media (max-width: 600px) { 
+            .slide-content { width: 90%; }
+            .slide-content h2 { font-size: 6vw; }
+            .slide-content p { font-size: 3.5vw; }
+            .slide img { width: 100%; max-height: 35vh; }
+            .dot { width: 10px; height: 10px; }
+        }
+    </style>
 </head>
 <body>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="/assets/imgs/about-product1.png" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="/assets//imgs/about-product2.png" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide" style="background: url('/mnt/data/718733046-artboard-1-copy-9.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Robust Flavor, Wellness Boost</h2>
+                    <p>Experience the richness of traditional cooking with our refined soybean oil.</p>
+                </div>
+                <img src="/mnt/data/718733046-artboard-1-copy-9.jpg" alt="Soybean Oil">
+            </div>
+            <div class="slide" style="background: url('/assets/imgs/heroBanner1.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Tradition in Every Drop</h2>
+                    <p>Packed with essential nutrients, this mustard oil brings the authentic taste of home.</p>
+                </div>
+                <img src="/assets/imgs/heroBanner1.jpg" alt="Mustard Oil">
+            </div>
+            <div class="slide" style="background: url('/assets/imgs/heroBanner2.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Fluffier Rotis, Crispy Delights!</h2>
+                    <p>This vanaspati oil ensures softer rotis and crispier fried snacks.</p>
+                </div>
+                <img src="/assets/imgs/heroBanner2.jpg" alt="Vanaspati Oil">
+            </div>
+            <div class="slide" style="background: url('/assets/imgs/bg4.jpg') no-repeat center/cover;">
+                <div class="slide-content">
+                    <h2>Light, Healthy, Versatile</h2>
+                    <p>Enriched with Omega-3 and Vitamin E, this refined soybean oil is perfect for daily cooking.</p>
+                </div>
+                <img src="/assets/imgs/bg4.jpg" alt="Refined Soybean Oil">
+            </div>
+        </div>
+        <div class="navigation"></div>
+    </div>
+    
+    <script>
+        const slides = document.querySelector('.slides');
+        const dotsContainer = document.querySelector('.navigation');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let index = 0;
+        
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.dataset.index = i;
+                dotsContainer.appendChild(dot);
+            }
+            dotsContainer.children[0].classList.add('active');
+        }
+        
+        function updateSlide() {
+            slides.style.transform = `translateX(-${index * 100}vw)`;
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+            dotsContainer.children[index].classList.add('active');
+        }
+        
+        function autoSlide() {
+            index = (index + 1) % totalSlides;
+            updateSlide();
+        }
+        
+        dotsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('dot')) {
+                index = parseInt(e.target.dataset.index);
+                updateSlide();
+            }
+        });
+        
+        createDots();
+        setInterval(autoSlide, 4000);
+    </script>
 </body>
-</html> 
+</html>

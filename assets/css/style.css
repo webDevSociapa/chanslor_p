@@ -53,6 +53,25 @@ body {
     color: #F4991A !important;
 }
 
+.navbar-nav .dropdown-menu {
+    background-color: #080808; /* Match the navbar background */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins';
+    padding: 10px 20px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #F4991A; /* Highlight color */
+    color: black;
+}
+
 .sidebar-menu {
     background: rgba(0, 0, 0, 0.9);
     color: white;
@@ -141,46 +160,8 @@ body {
 }
 
 
-
-
-
 /* Hero Section */
 
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-content {
-    max-width: 50%;
-    color: white;
-    z-index: 2;
-}
-
-.hero-title {
-    font-family: 'Copperplate Gothic Std 29 AB';
-    color: #E5AA11;
-    font-weight: 700;
-    font-size: 3rem;
-    letter-spacing: 3px;
-    margin-top: -20px;
-}
-
-.hero-title span {
-    font-size: 65px;
-    margin-top: -12px;
-}
-
-.hero-content p {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: 'Oswald';
-}
 
 .hero-btn {
     font-size: 18px;
@@ -191,145 +172,118 @@ body {
     padding: 10px 35px;
     border-radius: 20px;
     color: #ffffff;
-    cursor: pointer;
 }
 
-/* BACKGROUND SLIDER */
-.slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+
+
+.slider-container { 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
 }
 
-.slides {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    transition: transform 1s ease;
+.slides { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    width: 400%; /* Adjust based on number of slides */
 }
 
-.slide {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-position: right center;
-    background-repeat: no-repeat;
+.slide { 
+    min-width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 50px; 
+    color: #fff; 
 }
 
-.bg1 { background-image: url('/assets/imgs/heroBanner1.jpg'); }
-.bg2 { background-image: url('/assets/imgs/heroBanner2.jpg'); }
-.bg3 { background-image: url('/assets/imgs/heroBanner3.jpg'); }
-.bg4 { background-image: url('/assets/imgs/heroBanner4.jpg'); }
-
-/* NAVIGATION DOTS */
-.navigation {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 2;
+.slide-content h2 {
+    color: #FFC107; /* Yellow text like in your image */
+    font-family: 'Copperplate Gothic Std 29 AB';
 }
 
-.navigation label {
-    width: 12px;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.5);
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
+.slide-content  {
+    width: 40%; 
+    max-width: 600px;
+    color: #fff; /* Yellow text like in your image */
+    font-family: Oswald;
 }
 
-/* RADIO BUTTONS FOR MANUAL SLIDE CONTROL */
-input[type="radio"] {
-    display: none;
+.slide-content h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
 }
 
-/* SLIDE POSITIONING */
-#slide1:checked ~ .slides { transform: translateX(0%); }
-#slide2:checked ~ .slides { transform: translateX(-100%); }
-#slide3:checked ~ .slides { transform: translateX(-200%); }
-#slide4:checked ~ .slides { transform: translateX(-300%); }
-
-.navigation label:hover {
-    background: rgba(255, 255, 255, 0.8);
+.slide-content p { 
+    font-size: 1.2rem; 
+    line-height: 1.6; 
 }
 
-/* AUTO SLIDE WITHOUT ANIMATION *
-
-
-/* FIXED CONTENT */
-.container {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-    color: #fff;
-    background-size: 100% 100%
+.slide img { 
+    width: 50vw; 
+    height: auto; 
 }
 
-.hero-title {
-    font-size: 3rem;
-    color: #E5AA11;
-    font-weight: 700;
+/* Navigation Dots */
+.navigation { 
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
 }
 
-.hero-btn {
-    font-size: 18px;
-    background-color: #E5AA11;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 20px;
-    color: #ffffff;
-    cursor: pointer;
+.dot { 
+    width: 15px; 
+    height: 15px; 
+    margin: 5px; 
+    border-radius: 50%; 
+    background: gray; 
+    cursor: pointer; 
 }
 
-/* NAVIGATION DOTS */
-.navigation {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.dot.active { 
+    background: #FFC107; /* Highlight active dot */
 }
 
-.navigation label {
-    width: 12px;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.5);
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
+
+@media (max-width: 768px) {
+    .slide-content {
+        width: 60%;
+    }
+
+    .slide img {
+        display: none;
+    }
 }
 
-/* RADIO BUTTONS FOR MANUAL SLIDE CONTROL */
-input[type="radio"] {
-    display: none;
+@media (max-width: 576px) {
+    .slide-content {
+        width: 80%;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
 }
 
-/* SLIDE POSITIONING */
-#slide1:checked ~ .slides { transform: translateX(0%); }
-#slide2:checked ~ .slides { transform: translateX(-100%); }
-#slide3:checked ~ .slides { transform: translateX(-200%); }
-#slide4:checked ~ .slides { transform: translateX(-300%); }
+@media (max-width: 420px) {
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
 
-.navigation label:hover {
-    background: rgba(255, 255, 255, 0.8);
+    .slide-content p {
+        font-size: 0.9rem;
+    }
 }
 
-/* AUTO SLIDE WITHOUT ANIMATION */
-@keyframes autoSlide {
-    0%, 25% { transform: translateX(0%); }
-    26%, 50% { transform: translateX(-100%); }
-    51%, 75% { transform: translateX(-200%); }
-    76%, 100% { transform: translateX(-300%); }
-}
-	
-.slides {
-    animation: autoSlide 6s linear infinite;
-}
 
 /* Brand Section Styles */
 
