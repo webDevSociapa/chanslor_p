@@ -53,6 +53,26 @@ body {
     color: #F4991A !important;
 }
 
+.navbar-nav .dropdown-menu {
+    background-color: #080808; /* Match the navbar background */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins';
+    padding: 10px 20px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #F4991A; /* Highlight color */
+    color: black;
+}
+
+
 .sidebar-menu {
     background: rgba(0, 0, 0, 0.9);
     color: white;
