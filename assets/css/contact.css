@@ -312,7 +312,7 @@ body {
 
 /* footer Section by Robin */
 .footer {
-    background: url('/assets/imgs/footer-bg.png') no-repeat center/cover;
+    background: url('/assets/imgs/footerWaveBg.png') no-repeat center/cover;
     padding: 80px 0;
     position: relative;
     color: black;
