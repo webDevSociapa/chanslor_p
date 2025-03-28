@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container navbar-container">
             <!-- Mobile Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
@@ -48,18 +48,20 @@
 
                 <!-- Logo (Centered in Mobile) -->
                 <a class="navbar-brand mx-auto" href="#">
-                    <img src="assets/imgs/chancellor-logo.png" alt="logo">
+                    <img src="assets/imgs/newLogoChancellor.png" alt="logo">
                 </a>
 
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="productsDropdown">
                             <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
                             <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
-                            <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
+                            <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar
+                                    Oil</a></li>
                             <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
                         </ul>
                     </li>
@@ -73,7 +75,7 @@
     <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="sidebarLabel">
-                <img src="assets/imgs/mainLogoNew.png" alt="logo">
+                <img src="assets/imgs/newLogoChancellor.png" alt="logo">
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -94,7 +96,8 @@
             <div class="slide" style="background: url('/assets/imgs/heroBanner4.jpg') no-repeat center/cover;">
                 <div class="slide-content">
                     <h2>Robust Flavor, Wellness Boost</h2>
-                    <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health and taste.</p>
+                    <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health
+                        and taste.</p>
                     <button class="hero-btn">All Products</button>
                 </div>
 
@@ -110,7 +113,8 @@
             <div class="slide" style="background: url('/assets/imgs/heroBanner2.jpg') no-repeat center/cover;">
                 <div class="slide-content">
                     <h2>Fluffier Rotis, Crispy Delights!</h2>
-                    <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier fried snacks.</p>
+                    <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier
+                        fried snacks.</p>
                     <button class="hero-btn">All Products</button>
 
                 </div>
@@ -131,7 +135,7 @@
         const dotsContainer = document.querySelector('.navigation');
         const totalSlides = document.querySelectorAll('.slide').length;
         let index = 0;
-        
+
         function createDots() {
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
@@ -141,25 +145,25 @@
             }
             dotsContainer.children[0].classList.add('active');
         }
-        
+
         function updateSlide() {
             slides.style.transform = `translateX(-${index * 100}vw)`;
             document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
             dotsContainer.children[index].classList.add('active');
         }
-        
+
         function autoSlide() {
             index = (index + 1) % totalSlides;
             updateSlide();
         }
-        
+
         dotsContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('dot')) {
                 index = parseInt(e.target.dataset.index);
                 updateSlide();
             }
         });
-        
+
         createDots();
         setInterval(autoSlide, 3000);
     </script>
