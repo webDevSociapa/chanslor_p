@@ -153,6 +153,23 @@ body {
 }
 
 
+/* Product Bg */
+
+.product-bg {
+    background: url('/assets/imgs/productBanner.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*  Product Bg  */
+
+
 /* product main bg */
 
 /* Main Section */
@@ -361,10 +378,9 @@ body {
 }
 
 .pure-taste-image {
-    width: 100%;
-    border: 1px solid #E5AA11;
-    border-left: 0;
-    border-right: 0;
+    object-fit: contain;
+    height: 1200px !important;
+    object-fit: cover;
     }
 
 /* 🔹 Responsive Adjustments */
