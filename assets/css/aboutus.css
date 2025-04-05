@@ -271,15 +271,9 @@ body {
 
 
 
-
-
-
-
-
-
 .about-product {
     background: #090909;
-    padding: 60px 20px;
+    padding: 20px 20px;
     position: relative;
 }
 
@@ -485,12 +479,18 @@ body {
 
 .about-product-list {
     background-color: #090909;
-    /* background: url("/assets/imgs/quality-about.png") no-repeat center; */
-    background-size: cover;
     padding: 100px 20px 150px 20px;
     width: 100%;
     margin: 0;
     text-align: center;
+    position: relative;
+}
+
+.left-bg {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transform: translateX(-20%);
 }
 
 .about-product-list-title {
@@ -537,8 +537,8 @@ body {
     color: #fff;
 }
 
-.product-box1{
-    background-color: #D5E8F7;
+.product-box1 {
+    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6)); 
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -546,10 +546,13 @@ body {
     text-align: center;
     max-width: 300px;
     color: #fff;
+    backdrop-filter: blur(10px); /* Adds a glass-like blur effect */
 }
 
+
+
 .product-box2{
-    background-color: #F9CCA7;
+    background: linear-gradient(to bottom, rgba(248, 204, 167, 0.6), rgba(248, 204, 167, 0.6), rgba(248, 204, 167, 0.6));
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -560,7 +563,7 @@ body {
 }
 
 .product-box3{
-    background-color: #9BCC5B;
+    background: linear-gradient(to bottom, rgba(155, 204, 91, 0.6), rgba(155, 204, 91, 0.6), rgba(155, 204, 91, 0.6));
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -571,7 +574,7 @@ body {
 }
 
 .product-box4{
-    background-color: #D5E8F7;
+    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6)); 
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -676,11 +679,11 @@ body {
 
 .contact-container {
     display: flex;
+    border: none;
     justify-content: center;
-    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
-    align-items: center;
-    /* Ensures vertical alignment */
-    height: 600px;
+    background: url('/assets/imgs/newContact1.jpg') no-repeat center/cover;
+    align-items: center; /* Ensures vertical alignment */
+    height: 800px;
 }
 
 .contact-section {
