@@ -158,8 +158,13 @@ body {
         right: 15px;
         top: 40px;
     }
-}
 
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        margin: 0 auto; /* Center the dropdown menu */
+    }
+}
 
 /* Hero Section */
 
@@ -684,7 +689,7 @@ body {
     display: flex;
     border: none;
     justify-content: center;
-    background: url('/assets/imgs/newContact1.jpg') no-repeat center/cover;
+    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     align-items: center; /* Ensures vertical alignment */
     height: 800px;
 }
