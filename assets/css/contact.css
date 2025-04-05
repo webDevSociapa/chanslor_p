@@ -125,6 +125,7 @@ body {
 
     .navbar {
         margin-top: -85px;
+        background-size: 100% 35% !important;
     }
 
     /* Reduce Menu Button (Toggler) Size */
@@ -159,7 +160,29 @@ body {
 
 /*  */
 
-.contact-banner-container {
+
+
+.contact-hero-section{
+    background: url('/assets/imgs/newContact1.jpg') no-repeat center/cover;
+    height: 700px;
+           margin-top: -100px;
+           display: flex;
+           align-items: center;
+           position: relative;
+}
+
+@media (max-width: 768px) {
+    .contact-hero-section {
+        height: 400px;
+    }
+}
+ @media (max-width: 468px) {
+    .contact-hero-section {
+        height: 300px;
+    }
+}
+
+/* .contact-banner-container {
     background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     height: 800px;
     margin-top: -100px;
@@ -167,7 +190,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-}
+} */
 
 
 @media (max-width: 768px) {
@@ -230,7 +253,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 250px;
+    max-width: 220px;
 }
 
 
@@ -250,7 +273,7 @@ body {
 .contact-container {
     display: flex;
     justify-content: center;
-    background: url('/assets/imgs/newContact1.jpg') no-repeat center/cover;
+    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     align-items: center;
     /* Ensures vertical alignment */
     height: 800px;

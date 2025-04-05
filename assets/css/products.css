@@ -123,6 +123,8 @@ body {
 
     .navbar {
         margin-top: -85px;
+        background-size: 100% 35% !important;
+
     }
 
     /* Reduce Menu Button (Toggler) Size */
@@ -157,13 +159,15 @@ body {
 
 .product-bg {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
     color: #fff;
     margin-bottom: 30px !important;
 }
+
+
 
 
 /*  Product Bg  */
@@ -316,6 +320,34 @@ body {
         margin-top: 30px;
     }
 }
+
+
+@media (max-width: 480px) {
+    .products-section {
+        padding: 20px;
+    }
+
+    .product-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-box h2 {
+        font-size: 16px;
+    }
+
+    .product-box p {
+        font-size: 12px;
+    }
+
+    .products-image img {
+        display: none;
+    }
+}
+
+
+
+
 
 /* Section Background & Layout */
 .pure-taste-section {
@@ -478,6 +510,34 @@ body {
     .pure-taste-image {
         width: 100%;
     }
+
+    .pure-main-content{
+        width: 100%;
+    }
+
+    .taste-product-main-image img {
+        width: 100%;
+        height: 600px;
+        margin-top: 10px;
+    }
+
+    .product-part {
+width: 100%;
+    height: 300px;
+    margin-right: -130px;
+    z-index: 1;
+    }
+    .product-part2 {
+        width: 100%;
+        height: 280px;
+        margin-left: -150px;
+        z-index: 1;
+    }
+    .pure-product-main{
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -495,6 +555,28 @@ body {
 
     .pure-taste-image {
         width: 100%;
+    }
+    .pure-main-content{
+        width: 100%;
+    }
+
+    .product-part {
+        width: 100%;
+        height: 300px;
+        margin-right: -130px;
+        z-index: 1;
+    }
+    .product-part2 {
+        width: 100%;
+        height: 280px;
+        margin-left: -150px;
+        z-index: 1;
+    }
+
+    .taste-product-main-image img {
+        width: 100%;
+        height: 500px;
+        margin-top: 10px;
     }
 }
 
@@ -519,6 +601,31 @@ body {
     .pure-taste-image {
         width: 100%;
     }
+    .pure-main-content{
+        width: 500px !important;
+        border: 2px solid;
+    }
+
+    .product-part {
+        width: 150px;
+        height: 150px;
+        margin-top: 100px;
+        margin-right: -130px;
+        z-index: 1;
+    }
+    .product-part2 {
+        width: 150px;
+        height: 150px;
+        margin-top: 100px;
+
+        margin-left: -150px;
+        z-index: 1;
+    }
+    .taste-product-main-image img {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+    }
 }
 
 
@@ -527,7 +634,7 @@ body {
     display: flex;
     border: none;
     justify-content: center;
-    background: url('/assets/imgs/newContact1.jpg') no-repeat center/cover;
+    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     align-items: center; /* Ensures vertical alignment */
     height: 800px;
 }
@@ -721,8 +828,27 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
-}
 
-.sp{
-    border: 2px solid;
+    .quick-links {
+        text-align: center !important;
+    }
+}
+  
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 10px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .quick-links ul li {
+        text-align: center !important;
+    }
 }
