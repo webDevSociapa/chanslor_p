@@ -30,100 +30,118 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg">
         <div class="container navbar-container">
-            <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
-                aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                </ul>
-
-                <!-- Logo (Centered in Mobile) -->
-                <a class="navbar-brand mx-auto" href="#">
-                    <img src="assets/imgs/newLogoChancellor.png" alt="logo">
+          <!-- Mobile Toggle Button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Logo (Centered Only in Mobile) -->
+          <a class="navbar-brand" href="#">
+            <img src="assets/imgs/newLogoChancellor.png" alt="logo">
+          </a>
+      
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            </ul>
+      
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Products
                 </a>
-
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Products
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                            <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
-                            <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
-                            <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar
-                                    Oil</a></li>
-                            <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                  <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
+                  <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
+                  <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
+                  <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
-    </nav>
-
-    <!-- Offcanvas Sidebar -->
-    <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
+      </nav>
+      
+      <!-- Offcanvas Sidebar -->
+      <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="sidebarLabel">
-                <img src="assets/imgs/newLogoChancellor.png" alt="logo">
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="offcanvas-title" id="sidebarLabel">
+            <img src="assets/imgs/newLogoChancellor.png" alt="logo" class="img-fluid">
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <ul class="list-group">
-                <li class="list-group-item"><a href="/">Home</a></li>
-                <li class="list-group-item"><a href="aboutus.html">About Us</a></li>
-                <li class="list-group-item"><a href="products.html">Products</a></li>
-                <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
-            </ul>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="/">Home</a></li>
+            <li class="list-group-item"><a href="aboutus.html">About Us</a></li>
+            <li class="list-group-item">
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="mobileProductsDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="mobileProductsDropdown">
+                    <a class="dropdown-item text-black hover:bg-yellow-400 hover:text-black" href="kachighaniOil.html">
+                        Kachi Ghani Pure Mustard Oil
+                      </a>
+                   <li><a class="dropdown-item text-black" href="mustardOil.html">Mustard Oil</a></li>
+                  <li><a class="dropdown-item text-black" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
+                  <li><a class="dropdown-item text-black" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
-    </div>
+      </div>
+      
 
 
     <!-- Hero Section -->
     <div class="slider-container">
-        <div class="slides">
-            <div class="slide bg-slide1">
-                <div class="slide-content">
-                    <h2>Robust Flavor, Wellness Boost</h2>
-                    <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health
-                        and taste.</p>
-                    <button class="hero-btn">All Products</button>
+        <div class="slider-track"> 
+            <div class="slides">
+                <div class="slide bg-slide1">
+                    <div class="slide-content">
+                        <h2>Robust Flavor, Wellness Boost</h2>
+                        <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health
+                            and taste.</p>
+                        <button class="hero-btn">All Products</button>
+                    </div>
+    
                 </div>
+                <div class="slide bg-slide2">
+                    <div class="slide-content">
+                        <h2>Tradition in Every Drop</h2>
+                        <p>Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking.</p>
+                        <button class="hero-btn">All Products</button>
+                    </div>
+                </div>
+                <div class="slide bg-slide3">
+                    <div class="slide-content">
+                        <h2>Fluffier Rotis, Crispy Delights!</h2>
+                        <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier
+                            fried snacks.</p>
+                        <button class="hero-btn">All Products</button>
+                    </div>
+                </div>
+                <div class="slide bg-slide4">
+                    <div class="slide-content">
+                        <h2>Light, Healthy, Versatile</h2>
+                        <p>Enriched with Omega-3 and Vitamin E, this refined soybean oil is perfect for daily cooking.</p>
+                        <button class="hero-btn">All Products</button>
+                    </div>
+                </div>
+            </div>
+</div>
 
-            </div>
-            <div class="slide bg-slide2">
-                <div class="slide-content">
-                    <h2>Tradition in Every Drop</h2>
-                    <p>Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking.</p>
-                    <button class="hero-btn">All Products</button>
-                </div>
-            </div>
-            <div class="slide bg-slide3">
-                <div class="slide-content">
-                    <h2>Fluffier Rotis, Crispy Delights!</h2>
-                    <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier
-                        fried snacks.</p>
-                    <button class="hero-btn">All Products</button>
-                </div>
-            </div>
-            <div class="slide bg-slide4">
-                <div class="slide-content">
-                    <h2>Light, Healthy, Versatile</h2>
-                    <p>Enriched with Omega-3 and Vitamin E, this refined soybean oil is perfect for daily cooking.</p>
-                    <button class="hero-btn">All Products</button>
-                </div>
-            </div>
-        </div>
         <div class="navigation"></div>
     </div>
 
@@ -266,43 +284,43 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo Section (Top Left) -->
-            <div class="footer-logo">
-                <img src="/assets/imgs/chancellor-logo.png" />
-            </div>
-            <!-- Corporate Office Section (Left) -->
-            <div class="footer-column corporate-office">
-                <h3 class="footer-title">Corporate Office</h3>
-                <p>Bhagwati Sadan, Swami Dayanand Marg, Alwar (Raj.) 301001 INDIA</p>
-                <!-- <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipis.</p> -->
-                <p><strong>Tel No:</strong>+91 144 2332922/2332358</p>
-                <p><strong>E-mail:</strong>info@dataoils.com</p>
-            </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo Section (Top Left) -->
+                <div class="footer-logo">
+                    <img src="/assets/imgs/chancellor-logo.png" />
+                </div>
+                <!-- Corporate Office Section (Left) -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Corporate Office</h3>
+                    <p>Bhagwati Sadan, Swami Dayanand Marg, Alwar (Raj.) 301001 INDIA</p>
+                    <!-- <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipis.</p> -->
+                    <p><strong>Tel No:</strong>+91 144 2332922/2332358</p>
+                    <p><strong>E-mail:</strong>info@dataoils.com</p>
+                </div>
 
-            <!-- Quick Links Section (Center) -->
-            <div class="footer-column quick-links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Catalogue</a></li>
-                    <li><a href="#">Site Map</a></li>
-                </ul>
-            </div>
+                <!-- Quick Links Section (Center) -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
 
-            <!-- Legal Section (Right) -->
-            <div class="footer-column legal">
-                <h3 class="footer-title">Legal</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">T&C</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+                <!-- Legal Section (Right) -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">T&C</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     <!-- footer -->
 
 

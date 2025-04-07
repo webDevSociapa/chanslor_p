@@ -629,14 +629,13 @@ width: 100%;
 }
 
 
-
 .contact-container {
     display: flex;
     border: none;
     justify-content: center;
     background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
     align-items: center; /* Ensures vertical alignment */
-    height: 800px;
+    height: 600px;
 }
 
 .contact-section {
