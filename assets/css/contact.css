@@ -8,10 +8,11 @@ body {
     background: url(/assets/imgs/nav-bg.png) no-repeat center;
     background-size: contain;
     height: 215px;
-    margin-top: -50px;
-    position: relative;
     background-size: 100% 100%;
+    margin-top: -40px;
+    position: relative;
     z-index: 5;
+
 }
 
 .navbar-nav .nav-link {
@@ -31,7 +32,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 10px 20px;
-    
+
 }
 
 .navbar-brand {
@@ -55,7 +56,8 @@ body {
 }
 
 .navbar-nav .dropdown-menu {
-    background-color: #080808; /* Match the navbar background */
+    background-color: #080808;
+    /* Match the navbar background */
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -69,10 +71,10 @@ body {
 }
 
 .navbar-nav .dropdown-item:hover {
-    background-color: #F4991A; /* Highlight color */
+    background-color: #F4991A;
+    /* Highlight color */
     color: black;
 }
-
 
 .sidebar-menu {
     background: rgba(0, 0, 0, 0.9);
@@ -110,12 +112,79 @@ body {
 .navbar-toggler-icon {
     filter: invert(1);
 }
+
 .right-menu {
     margin-left: 95px;
 }
 
+.top-bg {
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    left: 15%;
+    margin-top: -230px;
+}
+
+/* Mobile View: Center Logo */
+@media (max-width: 768px) {
+    .navbar {
+        background-size: 100% 35% !important;
+        margin-top: -85px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        z-index: 10;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        z-index: 11;
+    }
+
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+/* Optional: Limit logo size on small devices */
+.navbar-brand img {
+    max-height: 55px;
+    width: auto;
+}
+
+/* General Tweaks */
+.navbar-toggler {
+    border: none;
+    padding: 6px;
+}
+
+.navbar-toggler-icon {
+    width: 22px !important;
+    height: 22px !important;
+    filter: invert(1);
+}
+
+
 
 @media (max-width: 478px) {
+
     /* Adjust Navbar Position */
     .navbar-container {
         margin-top: -40px;
@@ -130,13 +199,16 @@ body {
     /* Reduce Menu Button (Toggler) Size */
     .navbar-toggler {
         border: none;
-        padding: 6px; /* Reduce padding for a smaller button */
+        padding: 6px;
+        /* Reduce padding for a smaller button */
     }
 
     .navbar-toggler-icon {
-        width: 22px !important; /* Reduce icon size */
+        width: 22px !important;
+        /* Reduce icon size */
         height: 22px !important;
-        filter: invert(1); /* Make it white */
+        filter: invert(1);
+        /* Make it white */
     }
 
     /* Center Logo Properly */
@@ -152,6 +224,19 @@ body {
         right: 15px;
         top: 40px;
     }
+
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Center the dropdown menu */
+    }
+
+    .navbar-brand img {
+        max-height: 45px;
+        width: auto;
+    }
+
 }
 
 /*  */
@@ -358,7 +443,7 @@ body {
 /* footer Section by Robin */
 .footer {
     background: url('/assets/imgs/footerWaveBg.png') no-repeat center/cover;
-    padding: 80px 0;
+    padding: 10px 10px;
     position: relative;
     color: black;
 }
@@ -399,10 +484,11 @@ body {
 
 .footer-column {
     flex: 1;
-    min-width: 250px;
     font-family: DIN Pro;
+    min-width: 280px;
 
 }
+
 
 .corporate-office {
     text-align: left;
@@ -443,31 +529,98 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: #D82127; 
+    color: #D82127;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+        align-items: center;
+        /* This centers all children horizontally */
         text-align: center;
+        /* This centers text inside each column */
     }
 
-    .footer-column {
+    .footer-column,
+    .footer-logo {
+        flex: 1 1 100%;
         margin-bottom: 20px;
-        text-align: center;
     }
 
-    .legal {
-        text-align: center;
+
+
+    .footer-logo img {
+        max-width: 180px;
+        height: auto;
+        margin: 0 auto;
     }
 
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+}
+
+@media(max-width: 576px) {
     .footer-logo {
         position: relative;
         top: 0;
         left: 0;
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-column {
+        flex: 1;
+        font-family: DIN Pro;
+        text-align: center;
+
+
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+}
+
+/*  */
+
+@media(max-width: 420px) {
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-column {
+        flex: 1;
+        font-family: DIN Pro;
+        text-align: center;
+
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .quick-links2 {
+        text-align: center;
+    }
+
+    .legal2 {
+        text-align: center;
     }
 }
 
