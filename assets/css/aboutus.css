@@ -239,123 +239,34 @@ body {
 }
 
 
-/* Banner Styles */
-.slider-container { 
-    position: relative; 
-    width: 100vw; 
-    height: 100vh; 
+
+
+.about-banner-container {
+    background: url('/assets/imgs/NewAboutMain.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
 }
 
-.slides { 
-    display: flex; 
-    transition: transform 0.5s ease-in-out; 
-    width: 400%; /* Adjust based on number of slides */
-}
-
-.slide { 
-    min-width: 100vw; 
-    height: 100vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 50px; 
-    color: #fff; 
-}
-
-.slide-content h2 {
-    color: #FFC107; /* Yellow text like in your image */
-    font-family: 'Copperplate Gothic Std 29 AB';
-}
-
-.slide-content  {
-    width: 40%; 
-    max-width: 600px;
-    color: #fff; /* Yellow text like in your image */
-    font-family: Oswald;
-}
-
-.slide-content h2 { 
-    font-size: 2.5rem; 
-    margin-bottom: 20px; 
-}
-
-.slide-content p { 
-    font-size: 1.2rem; 
-    line-height: 1.6; 
-}
-
-.slide img { 
-    width: 50vw; 
-    height: auto; 
-}
-
-/* Navigation Dots */
-.navigation { 
-    position: absolute; 
-    bottom: 20px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    display: flex; 
-}
-
-.dot { 
-    width: 15px; 
-    height: 15px; 
-    margin: 5px; 
-    border-radius: 50%; 
-    background: gray; 
-    cursor: pointer; 
-}
-
-.dot.active { 
-    background: #FFC107; /* Highlight active dot */
-}
-
-
-@media (max-width: 768px) {
-    .slide-content {
-        width: 60%;
-    }
-
-    .slide img {
-        display: none;
+@media(max-width: 768px) {
+    .about-banner-container {
+        height: 500px;
     }
 }
 
-@media (max-width: 576px) {
-    .slide-content {
-        width: 80%;
-    }
-
-    .slide-content h2 {
-        font-size: 2rem;
-    }
-
-    .slide-content p {
-        font-size: 1rem;
-    }
-
-}
-
-@media (max-width: 420px) {
-    .slide-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .slide-content p {
-        font-size: 0.9rem;
+@media(max-width: 480px) {
+    .about-banner-container {
+        height: 400px;
     }
 }
 
 
-.banner-about{
-        background: url('/assets/imgs/mainBannerAbout.jpg') no-repeat center/cover;
-           height: 800px;
-           margin-top: -100px;
-           display: flex;
-           align-items: center;
-           position: relative;
-    }
 
 
 
@@ -369,9 +280,10 @@ body {
     padding: 20px 40px;
 }
 
+
 .about-product-title h1 {
     color: #D82127;
-    font-family: "Copperplate Gothic Bold", sans-serif;
+    font-family: Aller Bold;
     font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -379,7 +291,7 @@ body {
 
 .about-product-desc p {
     color: #fff;
-    font-family: "DIN Pro", sans-serif;
+    font-family: Aller Regular;
     font-size: 18px;
     letter-spacing: 1.5px;
     line-height: 1.6;
@@ -405,11 +317,29 @@ body {
 }
 
 /* Responsive Fixes */
+
+@media(max-width: 1024px) {
+
+    .about-product2-image {
+        width: 100%;
+        margin-left: -5%;
+    }
+
+   
+}
+
+
 @media (max-width: 768px) {
     .about-product-content {
         text-align: center;
         padding: 10px 20px;
     }
+
+    .about-product  {
+        margin-top: 20px !important;
+    }
+
+ 
 
     .about-product-title h1 {
         font-size: 22px;
@@ -422,17 +352,18 @@ body {
 
     .about-product1-image,
     .about-product2-image {
-       margin-top: 150px;
-       text-align: center;
+        margin-top: 150px;
+        text-align: center;
     }
 }
 
 @media (max-width: 478px) {
+
     .about-product1-image,
     .about-product2-image {
         margin-top: 120px;
-       
     }
+
 }
 
 
@@ -447,7 +378,7 @@ body {
 
 .about-quality-title {
     color: #D82127;
-    font-family: "Copperplate Gothic Bold";
+    font-family: Aller Bold;
     font-size: 50px;
     font-weight: bold;
     display: flex;
@@ -469,6 +400,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: Aller Regular;
 }
 
 .about-quality-content {
@@ -493,6 +425,8 @@ body {
     width: 250px;
     text-align: center;
     color: #fff;
+    font-size: 16px;
+    font-family: Aller Regular;
     position: relative;
 }
 
@@ -563,6 +497,7 @@ body {
         width: 90%;
     }
 }
+
 /*  Product list  */
 
 .about-product-list {
@@ -596,6 +531,7 @@ body {
     width: 100px;
     height: auto;
 }
+
 /* .about-quality-text {
     font-size: 18px;
     color: #fff;
@@ -613,20 +549,23 @@ body {
     margin-top: 40px;
 }
 
-
-
 .product-list-box1 {
     display: flex;
+
     flex-direction: column;
     /* background: #D5E8F7; */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+
     color: #fff;
 }
+
+
+
 
 .product-box1 {
-    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6)); 
+    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6));
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -634,23 +573,11 @@ body {
     text-align: center;
     max-width: 300px;
     color: #fff;
-    backdrop-filter: blur(10px); /* Adds a glass-like blur effect */
+    backdrop-filter: blur(10px);
+    /* Adds a glass-like blur effect */
 }
 
-
-
-.product-box2{
-    background: linear-gradient(to bottom, rgba(248, 204, 167, 0.6), rgba(248, 204, 167, 0.6), rgba(248, 204, 167, 0.6));
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    max-width: 300px;
-    color: #fff;
-}
-
-.product-box3{
+.product-box2 {
     background: linear-gradient(to bottom, rgba(155, 204, 91, 0.6), rgba(155, 204, 91, 0.6), rgba(155, 204, 91, 0.6));
     border-radius: 10px;
     padding: 20px;
@@ -659,10 +586,34 @@ body {
     text-align: center;
     max-width: 300px;
     color: #fff;
+    backdrop-filter: blur(10px);
+    /* Adds a glass-like blur effect */
 }
 
-.product-box4{
-    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6)); 
+.product-box3 {
+    background: linear-gradient(to bottom, rgb(250, 201, 163,0.2), rgb(250, 201, 163,0.6), rgb(250, 201, 163,0.6));
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+    color: #fff;
+}
+
+.product-box4 {
+    background: linear-gradient(to bottom, rgb(250, 201, 163,0.2), rgb(250, 201, 163,0.6), rgb(250, 201, 163,0.6));
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+    color: #fff;
+}
+
+.product-box4 {
+    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6));
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -702,8 +653,7 @@ body {
     position: relative;
 }
 
-.product-list-box1 h3
- {
+.product-list-box1 h3 {
     margin-top: 20px;
     font-family: DIN Pro;
     letter-spacing: 6%;
@@ -769,10 +719,12 @@ body {
     display: flex;
     border: none;
     justify-content: center;
-    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
-    align-items: center; /* Ensures vertical alignment */
+    background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
+    align-items: center;
+    /* Ensures vertical alignment */
     height: 800px;
 }
+
 
 .contact-section {
     padding: 40px;
@@ -851,8 +803,8 @@ body {
 
 /* footer Section by Robin */
 .footer {
-    background: url('/assets/imgs/footerWaveBg.png') no-repeat center/cover;
-    padding: 10px 10px;
+    background: url('/assets/imgs/common-footer.png') no-repeat center/cover;
+    padding: 6px 10px;
     position: relative;
     color: black;
 }
@@ -866,9 +818,11 @@ body {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    margin-top: 580px;
+    margin-top: 430px;
     font-family: DIN Pro;
 }
+
+
 
 .footer-logo {
     position: absolute;
@@ -916,7 +870,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 
 }
 
@@ -935,10 +889,63 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
+    font-family:  Aller Regular;
 }
 
 .footer-column ul li a:hover {
     color: #D82127;
+}
+
+
+@media (max-width: 1200px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
 }
 
 
@@ -980,6 +987,11 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
+    
+    .footer {
+
+    padding: 10px !important ;
+}
 
     .footer-title {
         font-size: 18px;
@@ -989,8 +1001,6 @@ body {
         flex: 1;
         font-family: DIN Pro;
         text-align: center;
-
-
     }
 
     .footer-column ul li a {
@@ -1018,6 +1028,11 @@ body {
         font-family: DIN Pro;
         text-align: center;
 
+    }
+
+    .footer {
+
+        padding: 10px !important ;
     }
 
     .footer-column ul li a {
