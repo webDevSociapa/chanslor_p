@@ -351,7 +351,7 @@ body {
 .contact-container {
     display: flex;
     justify-content: center;
-    background: url('/assets/imgs/contact-bg.png') no-repeat center/cover;
+    background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
     align-items: center;
     /* Ensures vertical alignment */
     height: 600px;
@@ -442,8 +442,8 @@ body {
 
 /* footer Section by Robin */
 .footer {
-    background: url('/assets/imgs/footerWaveBg.png') no-repeat center/cover;
-    padding: 10px 10px;
+    background: url('/assets/imgs/common-footer.png') no-repeat center/cover;
+    padding: 6px 10px;
     position: relative;
     color: black;
 }
@@ -457,9 +457,11 @@ body {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    margin-top: 580px;
+    margin-top: 430px;
     font-family: DIN Pro;
 }
+
+
 
 .footer-logo {
     position: absolute;
@@ -507,7 +509,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 
 }
 
@@ -526,10 +528,63 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
+    font-family:  Aller Regular;
 }
 
 .footer-column ul li a:hover {
     color: #D82127;
+}
+
+
+@media (max-width: 1200px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
 }
 
 
@@ -571,6 +626,11 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
+    
+    .footer {
+
+    padding: 10px !important ;
+}
 
     .footer-title {
         font-size: 18px;
@@ -580,8 +640,6 @@ body {
         flex: 1;
         font-family: DIN Pro;
         text-align: center;
-
-
     }
 
     .footer-column ul li a {
@@ -611,6 +669,11 @@ body {
 
     }
 
+    .footer {
+
+        padding: 10px !important ;
+    }
+
     .footer-column ul li a {
         font-size: 14px;
     }
@@ -621,58 +684,5 @@ body {
 
     .legal2 {
         text-align: center;
-    }
-}
-
-
-/* Media Quesries */
-
-@media (max-width: 768px) {
-    .contact-detail-section {
-        padding: 100px 0;
-    }
-
-    .contact-detail-title {
-        font-size: 24px;
-    }
-
-    .corporate-office h2,
-    .registered-office h2 {
-        font-size: 18px;
-    }
-
-    .corporate-office p,
-    .registered-office p {
-        font-size: 14px;
-    }
-    .contact-detail-image {
-        display: none;
-        
-}
-.contact-title  {
-    font-size: 30px;
-}
-}
-
-@media (max-width: 468px) {
-    .contact-detail-section {
-        padding: 50px 0;
-    }
-
-    .contact-detail-title {
-        font-size: 20px;
-    }
-
-    .corporate-office h2,
-    .registered-office h2 {
-        font-size: 16px;
-    }
-
-    .corporate-office p,
-    .registered-office p {
-        font-size: 12px;
-    }
-    .contact-title  {
-        font-size: 25px;
     }
 }

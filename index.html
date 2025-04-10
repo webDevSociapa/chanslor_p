@@ -2,150 +2,179 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chancellor</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chancellor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <style>
-        @font-face {
-            font-family: 'Copperplate Gothic Std 29 AB';
-            font-style: normal;
-            font-weight: normal;
-            src: url('assets/fonts/Copperplate-Gothic-Std-29-AB.woff') format('woff');
-        }
-    </style>
+  <style>
+    @font-face {
+      font-family: 'Copperplate Gothic Std 29 AB';
+      font-style: normal;
+      font-weight: normal;
+      src: url('assets/fonts/Copperplate-Gothic-Std-29-AB.woff') format('woff');
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container navbar-container">
-          <!-- Mobile Toggle Button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
-            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Logo (Centered Only in Mobile) -->
-          <a class="navbar-brand" href="#">
-            <img src="assets/imgs/newLogoChancellor.png" alt="logo">
-          </a>
-      
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container navbar-container">
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Logo (Centered Only in Mobile) -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/imgs/newLogoChancellor.png" alt="logo">
+      </a>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
+              <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
+              <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
+              <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
             </ul>
-      
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Products
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                  <li><a class="dropdown-item" href="kachighaniOil.html">Kachi Ghani Pure Mustard Oil</a></li>
-                  <li><a class="dropdown-item" href="mustardOil.html">Mustard Oil</a></li>
-                  <li><a class="dropdown-item" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
-                  <li><a class="dropdown-item" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarLabel">
+        <img src="assets/imgs/newLogoChancellor.png" alt="logo" class="img-fluid">
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="/">Home</a></li>
+        <li class="list-group-item"><a href="aboutus.html">About Us</a></li>
+        <li class="list-group-item">
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="mobileProductsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="mobileProductsDropdown">
+              <a class="dropdown-item text-black hover:bg-yellow-400 hover:text-black" href="kachighaniOil.html">
+                Kachi Ghani Pure Mustard Oil
+              </a>
+              <li><a class="dropdown-item text-black" href="mustardOil.html">Mustard Oil</a></li>
+              <li><a class="dropdown-item text-black" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar
+                  Oil</a></li>
+              <li><a class="dropdown-item text-black" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
             </ul>
           </div>
-        </div>
-      </nav>
-      
-      <!-- Offcanvas Sidebar -->
-      <div class="offcanvas offcanvas-start sidebar-menu" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="sidebarLabel">
-            <img src="assets/imgs/newLogoChancellor.png" alt="logo" class="img-fluid">
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="list-group">
-            <li class="list-group-item"><a href="/">Home</a></li>
-            <li class="list-group-item"><a href="aboutus.html">About Us</a></li>
-            <li class="list-group-item">
-              <div class="dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="mobileProductsDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Products
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="mobileProductsDropdown">
-                    <a class="dropdown-item text-black hover:bg-yellow-400 hover:text-black" href="kachighaniOil.html">
-                        Kachi Ghani Pure Mustard Oil
-                      </a>
-                   <li><a class="dropdown-item text-black" href="mustardOil.html">Mustard Oil</a></li>
-                  <li><a class="dropdown-item text-black" href="VanaspatiDanedaarOil.html">Vanaspati Safed & Danedaar Oil</a></li>
-                  <li><a class="dropdown-item text-black" href="refinedSoyabeenOil.html">Refined Soyabean Oil</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      
-
-
-    <!-- Hero Section -->
-    <div class="slider-container">
-        <div class="slider-track"> 
-            <div class="slides">
-                <div class="slide bg-slide1">
-                    <div class="slide-content">
-                        <h2>Robust Flavor, Wellness Boost</h2>
-                        <p>Experience the richness of traditional cooking with our refined soybean oil, crafted for health
-                            and taste.</p>
-                        <button class="hero-btn">All Products</button>
-                    </div>
-    
-                </div>
-                <div class="slide bg-slide2">
-                    <div class="slide-content">
-                        <h2>Tradition in Every Drop</h2>
-                        <p>Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking.</p>
-                        <button class="hero-btn">All Products</button>
-                    </div>
-                </div>
-                <div class="slide bg-slide3">
-                    <div class="slide-content">
-                        <h2>Fluffier Rotis, Crispy Delights!</h2>
-                        <p>With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis and crispier
-                            fried snacks.</p>
-                        <button class="hero-btn">All Products</button>
-                    </div>
-                </div>
-                <div class="slide bg-slide4">
-                    <div class="slide-content">
-                        <h2>Light, Healthy, Versatile</h2>
-                        <p>Enriched with Omega-3 and Vitamin E, this refined soybean oil is perfect for daily cooking.</p>
-                        <button class="hero-btn">All Products</button>
-                    </div>
-                </div>
-            </div>
-</div>
-
-        <div class="navigation"></div>
+        </li>
+        <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
+  </div>
 
-    <script>
+
+  <!-- Hero Section -->
+  <div class="hero-container" id="hero-banner">
+    <div class="hero-content">
+      <h2>Robust Flavor Wellness Boost</h2>
+      <p>
+        Experience the richness of traditional cooking with our refined soybean oil, crafted for health and taste.
+      </p>
+      <button class="hero-btn">All Products</button>
+    </div>
+    <div class="hero-nav">
+      <span class="dot" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </div>
+
+
+<!-- Script of Slider Banner -->
+  <script>
+    const banner = document.getElementById("hero-banner");
+    const dots = document.querySelectorAll(".dot");
+
+    const images = [
+      "/assets/imgs/new333.jpg",
+      "/assets/imgs/new222.jpg",
+      "/assets/imgs/new222.jpg"
+    ];
+
+    let currentIndex = 0;
+    let sliderInterval;
+
+    function showSlide(index) {
+      currentIndex = index;
+      banner.style.backgroundImage = `url('${images[currentIndex]}')`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[currentIndex].classList.add("active");
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function startSlider() {
+      sliderInterval = setInterval(nextSlide, 3000); // 3 seconds
+    }
+
+    function stopSlider() {
+      clearInterval(sliderInterval);
+    }
+
+    // Dot click navigation
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-index"));
+        showSlide(index);
+      });
+    });
+
+    // Start on load
+    showSlide(currentIndex);
+    startSlider();
+
+    // Pause on hover
+    // banner.addEventListener("mouseenter", stopSlider);
+    // banner.addEventListener("mouseleave", startSlider);
+  </script>
+
+  <!-- Script of Slider Banner -->
+
+  <!-- <script>
         const slides = document.querySelector('.slides');
         const dotsContainer = document.querySelector('.navigation');
         const totalSlides = document.querySelectorAll('.slide').length;
@@ -181,150 +210,150 @@
 
         createDots();
         setInterval(autoSlide, 3000);
-    </script>
-    <!-- Brand Section -->
-    <section class="brand-section">
-        <h2 class="brand-title mt-5"><span>B</span>rand &nbsp; <span>B</span>rief</h2>
-        <div class="brand-content">
-            In the heart of Alwar, Rajasthan, where royal heritage meets rich history, Chancellor was born. Chancellor
-            stands tall in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
-            grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our oil carries this
-            legacy, enriching meals with a touch of heritage. Chancellor edible oil is a trusted ally for housewives who
-            cook with passion and care. They choose our oil for its quality and the promise of health and taste.<br><br>
-            For every housewife, there is a Chancellor at home―the one who leads and provides. Our oil ensures that the
-            meals cooked are worthy of this head of the house and his family.<br><br>
-            Chancellor brings the nostalgic charm of Rajasthan into modern homes, offering quality and best-inclass
-            experience. It is a symbol of royalty, creating memorable meals and moments for families, ensuring that
-            every dish is fit for a Chancellor and his family.
+    </script> -->
+  <!-- Brand Section -->
+  <section class="brand-section">
+    <h2 class="brand-title mt-5"><span>B</span>rand &nbsp; <span>B</span>rief</h2>
+    <div class="brand-content">
+      In the heart of Alwar, Rajasthan, where royal heritage meets rich history, Chancellor was born. Chancellor
+      stands tall in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
+      grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our oil carries this
+      legacy, enriching meals with a touch of heritage. Chancellor edible oil is a trusted ally for housewives who
+      cook with passion and care. They choose our oil for its quality and the promise of health and taste.<br><br>
+      For every housewife, there is a Chancellor at home―the one who leads and provides. Our oil ensures that the
+      meals cooked are worthy of this head of the house and his family.<br><br>
+      Chancellor brings the nostalgic charm of Rajasthan into modern homes, offering quality and best-inclass
+      experience. It is a symbol of royalty, creating memorable meals and moments for families, ensuring that
+      every dish is fit for a Chancellor and his family.
+    </div>
+  </section>
+
+  <!-- products section -->
+  <section class="products-section">
+    <h2 class="products-title"><span>O</span>ur &nbsp; <span>P</span>roducts</h2>
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <img class="w-75" src="assets/imgs/kachiGhaniNew01.png" alt="kachi dhani">
         </div>
-    </section>
-
-    <!-- products section -->
-    <section class="products-section">
-        <h2 class="mt-5 products-title"><span>O</span>ur &nbsp; <span>P</span>roducts</h2>
-        <div class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <img class="w-75" src="assets/imgs/kachiGaniProduct01.png" alt="kachi dhani">
-                </div>
-                <div class="col-md-6">
-                    <div class="kd-content-bg">
-                        <p>
-                            in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
-                            grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
-                            oil carries this legacy, enriching meals with a touch of heritage.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <div class="so-content-bg">
-                        <p>
-                            in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
-                            grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
-                            oil carries this legacy, enriching meals with a touch of heritage.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img class="w-75" src="assets/imgs/MustardOilProduct01.png" alt="kachi dhani">
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <img class="w-75" src="assets/imgs/SoyabeanOilProduct01.png" alt="kachi dhani">
-                </div>
-                <div class="col-md-6">
-                    <div class="v-content-bg">
-                        <p>in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
-                            grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
-                            oil carries this legacy, enriching meals with a touch of heritage.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <div class="mo-content-bg">
-                        <p>in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
-                            grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
-                            oil carries this legacy, enriching meals with a touch of heritage.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img class="w-75" src="assets/imgs/VanaspatiOilProduct01.png" alt="kachi dhani">
-                </div>
-            </div>
+        <div class="col-md-6">
+          <div class="kd-content-bg">
+            <p>
+              in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
+              grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
+              oil carries this legacy, enriching meals with a touch of heritage.</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- video section -->
-    <section>
-        <img class="w-100" src="assets/imgs/new-video-banner.jpg" alt="video banner">
-    </section>
-
-    <!-- contact section -->
-    <section class="contact-container">
-        <div class="contact-section">
-            <h2 class="contact-title">Contact</h2>
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Full Name">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Contact Number">
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-                </div>
-                <button type="submit" class="btn send-btn">Send Us</button>
-            </form>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="so-content-bg">
+            <p>
+              in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
+              grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
+              oil carries this legacy, enriching meals with a touch of heritage.</p>
+          </div>
         </div>
-    </section>
+        <div class="col-md-6 text-center">
+          <img class="w-75" src="assets/imgs/MustardOilNew01.png" alt="kachi dhani">
+        </div>
+      </div>
 
-    <!-- footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <!-- Logo Section (Top Left) -->
-                <div class="footer-logo">
-                    <img src="/assets/imgs/chancellor-logo.png" />
-                </div>
-                <!-- Corporate Office Section (Left) -->
-                <div class="footer-column corporate-office">
-                    <h3 class="footer-title">Corporate Office</h3>
-                    <p>Bhagwati Sadan, Swami Dayanand Marg, Alwar (Raj.) 301001 INDIA</p>
-                    <!-- <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipis.</p> -->
-                    <p><strong>Tel No:</strong>+91 144 2332922/2332358</p>
-                    <p><strong>E-mail:</strong>info@dataoils.com</p>
-                </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <img class="w-75" src="assets/imgs/SoyabeanOilNew01.png" alt="kachi dhani">
+        </div>
+        <div class="col-md-6">
+          <div class="v-content-bg">
+            <p>in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
+              grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
+              oil carries this legacy, enriching meals with a touch of heritage.</p>
+          </div>
+        </div>
+      </div>
 
-                <!-- Quick Links Section (Center) -->
-                <div class="footer-column quick-links">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Catalogue</a></li>
-                        <li><a href="#">Site Map</a></li>
-                    </ul>
-                </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="mo-content-bg">
+            <p>in the FMCG industry, claiming its place with pride and dignity. Alwar’s majestic forts and
+              grand havelis infuse Chancellor with a sense of tradition and excellence. Every drop of our
+              oil carries this legacy, enriching meals with a touch of heritage.</p>
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <img class="w-75" src="assets/imgs/VanaspatiNew01.png" alt="kachi dhani">
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Legal Section (Right) -->
-                <div class="footer-column quick-links">
-                    <h3 class="footer-title">Legal</h3>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-condition.html">T&C</a></li>
-                        <li><a href="disclaimer.html">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    <!-- footer -->
+  <!-- video section -->
+  <section>
+    <img class="w-100" src="assets/imgs/ytVideo-bg-new.jpg" alt="video banner">
+  </section>
+
+  <!-- contact section -->
+  <section class="contact-container">
+    <div class="contact-section">
+      <h2 class="contact-title">Contact</h2>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Full Name">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Contact Number">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+        </div>
+        <button type="submit" class="btn send-btn">Send Us</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section (Top Left) -->
+      <div class="footer-logo">
+        <img src="/assets/imgs/chancellor-logo.png" />
+      </div>
+      <!-- Corporate Office Section (Left) -->
+      <div class="footer-column corporate-office">
+        <h3 class="footer-title">Corporate Office</h3>
+        <p>Bhagwati Sadan, Swami Dayanand Marg, Alwar (Raj.) 301001 INDIA</p>
+        <!-- <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipis.</p> -->
+        <p><strong>Tel No:</strong>+91 144 2332922/2332358</p>
+        <p><strong>E-mail:</strong>info@dataoils.com</p>
+      </div>
+
+      <!-- Quick Links Section (Center) -->
+      <div class="footer-column quick-links">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Section (Right) -->
+      <div class="footer-column quick-links">
+        <h3 class="footer-title">Legal</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-condition.html">T&C</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
