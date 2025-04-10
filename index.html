@@ -107,70 +107,104 @@
   <!-- Hero Section -->
   <div class="hero-container" id="hero-banner">
     <div class="hero-content">
-      <h2>Robust Flavor Wellness Boost</h2>
-      <p>
+      <h2 id="slide-title">Robust Flavor Wellness Boost</h2>
+      <p id="slide-description">
         Experience the richness of traditional cooking with our refined soybean oil, crafted for health and taste.
       </p>
-      <button class="hero-btn">All Products</button>
+      <button class="hero-btn" id="slide-button">All Products</button>
     </div>
     <div class="hero-nav">
       <span class="dot" data-index="0"></span>
       <span class="dot" data-index="1"></span>
       <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
     </div>
   </div>
 
 
 <!-- Script of Slider Banner -->
-  <script>
-    const banner = document.getElementById("hero-banner");
-    const dots = document.querySelectorAll(".dot");
+<script>
+  const banner = document.getElementById("hero-banner");
+  const dots = document.querySelectorAll(".dot");
 
-    const images = [
-      "/assets/imgs/new333.jpg",
-      "/assets/imgs/new222.jpg",
-      "/assets/imgs/new222.jpg"
-    ];
+  const slides = [
+    {
+      image: "/assets/imgs/homebannerNew5.jpg",
+      title: "Kachi Ghani Pure Mustard Oil",
+      description: "Made from the finest mustard seeds, this cold-pressed oil retains natural antioxidants and a rich, bold flavor to enhance your traditional recipes.",
+      buttonText: "All Products"
+    },
+    {
+      image: "/assets/imgs/new333.jpg",
+      title: "Mustard Oil",
+      description: "Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking while promoting heart health and immunity.",
+      buttonText: "Explore More"
+    },
+    {
+      image: "/assets/imgs/homebannerNew03.jpg",
+      title: "Vanaspati Safed & Danedaar Oil",
+      description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
+      buttonText: "Shop Now"
+    },
+    {
+      image: "/assets/imgs/homebannerNew04.jpg",
+      title: "Refined Soyabean Oil",
+      description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
+      buttonText: "Shop Now"
+    }
+  ];
 
-    let currentIndex = 0;
-    let sliderInterval;
+  let currentIndex = 0;
+  let sliderInterval;
 
-    function showSlide(index) {
-      currentIndex = index;
-      banner.style.backgroundImage = `url('${images[currentIndex]}')`;
+  function showSlide(index) {
+    const slide = slides[index];
+
+    // Optional: smooth fade effect
+    banner.classList.add("fade-out");
+
+    setTimeout(() => {
+      banner.style.backgroundImage = `url('${slide.image}')`;
+      document.getElementById("slide-title").textContent = slide.title;
+      document.getElementById("slide-description").textContent = slide.description;
+      document.getElementById("slide-button").textContent = slide.buttonText;
+
       dots.forEach(dot => dot.classList.remove("active"));
-      dots[currentIndex].classList.add("active");
-    }
+      dots[index].classList.add("active");
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showSlide(currentIndex);
-    }
+      banner.classList.remove("fade-out");
+    }, 300);
+  }
 
-    function startSlider() {
-      sliderInterval = setInterval(nextSlide, 3000); // 3 seconds
-    }
-
-    function stopSlider() {
-      clearInterval(sliderInterval);
-    }
-
-    // Dot click navigation
-    dots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        const index = parseInt(dot.getAttribute("data-index"));
-        showSlide(index);
-      });
-    });
-
-    // Start on load
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-    startSlider();
+  }
 
-    // Pause on hover
-    // banner.addEventListener("mouseenter", stopSlider);
-    // banner.addEventListener("mouseleave", startSlider);
-  </script>
+  function startSlider() {
+    sliderInterval = setInterval(nextSlide, 3000); // Auto-slide every 3s
+  }
+
+  function stopSlider() {
+    clearInterval(sliderInterval);
+  }
+
+  // Click on dots
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.getAttribute("data-index"));
+      currentIndex = index;
+      showSlide(currentIndex);
+      stopSlider();      // Optional: stop auto when dot clicked
+      startSlider();     // and restart it
+    });
+  });
+
+  // Initialize
+  showSlide(currentIndex);
+  startSlider();
+</script>
 
   <!-- Script of Slider Banner -->
 
