@@ -541,7 +541,7 @@ body {
     /* Prevents text from breaking */
     font-size: clamp(24px, 5vw, 50px);
     font-weight: 600;
-    font-family: 'Copperplate Gothic Std 29 AB';
+    font-family: Aller Bold;
     color: #D82127;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -601,10 +601,6 @@ body {
     .brand-title {
         font-size: clamp(24px, 5vw, 40px);
     }
-
-
-
-
     .brand-title span {
         font-size: clamp(30px, 6vw, 55px);
     }
@@ -687,14 +683,6 @@ body {
         line-height: 1.4;
     }
 }
-
-
-
-
-
-
-
-
 
 /*  Product Sction */
 
