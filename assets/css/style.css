@@ -1,5 +1,5 @@
 body {
-    background-color: #080808;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     background-color: none;
@@ -527,7 +527,7 @@ body {
 .brand-section {
     /* position: relative; */
     background: #000000;
-    padding: 50px 20px 150px 20px;
+    padding: 100px;
     overflow: hidden;
 }
 
@@ -754,7 +754,7 @@ body {
 }
 
 .kd-content-bg p {
-    font-size:28px;
+    font-size:24px;
     font-weight: 600;
     font-family: 'Aller Light';
     letter-spacing: 0.1rem;
@@ -770,9 +770,9 @@ body {
 }
 
 .so-content-bg p {
-    font-size: 30px;
+    font-size:24px;
     font-weight: 600;
-    font-family: 'oswald';
+    font-family: 'Aller Light';
     letter-spacing: 0.1rem;
     text-transform: capitalize;
 }
@@ -786,9 +786,9 @@ body {
 }
 
 .v-content-bg p {
-    font-size: 30px;
+    font-size:24px;
     font-weight: 600;
-    font-family: 'oswald';
+    font-family: 'Aller Light';
     letter-spacing: 0.1rem;
     text-transform: capitalize;
 }
@@ -801,10 +801,12 @@ body {
     background: linear-gradient(104.97deg, rgba(242, 100, 0, 0.3) 3.84%, rgba(31, 31, 31, 0.3) 95.4%);
 }
 
+
+
 .mo-content-bg p {
-    font-size: 30px;
+    font-size:24px;
     font-weight: 600;
-    font-family: 'oswald';
+    font-family: 'Aller Light';
     letter-spacing: 0.1rem;
     text-transform: capitalize;
 }
@@ -921,6 +923,7 @@ body {
     justify-content: center;
     background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
     align-items: center;
+    background-size: 100% 100%;
     /* Ensures vertical alignment */
     height: 600px;
 }
@@ -938,7 +941,7 @@ body {
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    font-family: Copperplate Gothic Bold;
+    font-family: Aller Bold;
 }
 
 .form-control {
@@ -949,6 +952,7 @@ body {
     border-bottom: 2px solid #E5AA11;
     border-radius: 0;
     font-size: 18px;
+    font-family: Aller Regular;
     color: #E5AA11;
     box-shadow: none !important;
 }
@@ -974,6 +978,8 @@ body {
     font-size: 18px;
     margin-top: 20px;
     border: none;
+    font-family: Aller Regular;
+
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -1020,7 +1026,7 @@ body {
     padding: 20px;
     position: relative;
     margin-top: 320px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 }
 
 
@@ -1078,10 +1084,13 @@ body {
 .footer-column ul {
     list-style: none;
     padding: 0;
+    font-family: Aller Regular;
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
+    font-family: Aller Regular;
+
 }
 
 .footer-column ul li a {
