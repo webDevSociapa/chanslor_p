@@ -246,7 +246,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-size: contain;
     background-position: center;
     position: relative;
@@ -296,6 +295,7 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
+    width: 570px;
 }
 
 /* Responsive Design */
@@ -317,10 +317,6 @@ body {
 
     .products-main-desc {
         font-size: 13px;
-    }
-
-    .product-image img {
-        width: 90%;
     }
 }
 
@@ -811,7 +807,7 @@ width: 100%;
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    margin-top: 430px;
+    margin-top: 320px;
     font-family: DIN Pro;
 }
 
@@ -896,7 +892,6 @@ width: 100%;
         align-items: center;
         text-align: center;
     }
-    
 
     .footer-logo {
         position: relative;
@@ -911,6 +906,7 @@ width: 100%;
         margin-bottom: 20px;
     }
 
+
     .footer-title {
         font-size: 24px;
     }
@@ -921,6 +917,7 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: 480px;
     }
 
     .footer-logo {

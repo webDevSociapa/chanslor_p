@@ -263,7 +263,7 @@ body {
 .hero-content {
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: left;
@@ -439,7 +439,7 @@ body {
 
     .hero-content {
         top: 20%;
-        left: 5%;
+        left: 40%;
         transform: translate(-50%, -50%);
     }
 
@@ -474,8 +474,7 @@ body {
 
     .hero-content {
         top: 15%;
-        left: 0%;
-        transform: translate(-50%, -50%);
+        left: 20%;
     }
 
     .hero-content h2 {
@@ -1032,7 +1031,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    margin-top: 300px;
+    margin-top: 320px;
     font-family: DIN Pro;
 }
 
