@@ -241,8 +241,6 @@ body {
     }
 }
 
-
-
 /* Hero Section */
 
 
@@ -256,17 +254,20 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: -100px;
-    transition: all 1s ease-out;}
+    transition: all 1s ease-out;
+}
 
 
-    #slide-description {
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Limit to 3 lines */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      
+#slide-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 
 .hero-content {
     position: absolute;
@@ -320,7 +321,8 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    transition: all 1s ease-out;}
+    transition: all 1s ease-out;
+}
 
 .dot.active {
     background-color: #ffffff;
@@ -477,8 +479,7 @@ body {
     }
 
     .hero-content {
-        top: 15%;
-        left: 20%;
+        top: 25%;
     }
 
     .hero-content h2 {
@@ -531,7 +532,7 @@ body {
 .brand-section {
     /* position: relative; */
     background: #000000;
-    padding: 100px;
+    padding: 120px;
     overflow: hidden;
 }
 
@@ -605,11 +606,12 @@ body {
     .brand-title {
         font-size: clamp(24px, 5vw, 40px);
     }
+
     .brand-title span {
         font-size: clamp(30px, 6vw, 55px);
     }
 
-    .brand-section{
+    .brand-section {
         padding: 20px 10px 60px 10px;
     }
 
@@ -758,7 +760,7 @@ body {
 }
 
 .kd-content-bg p {
-    font-size:24px;
+    font-size: 24px;
     font-weight: 600;
     font-family: 'Aller Light';
     letter-spacing: 0.1rem;
@@ -774,7 +776,7 @@ body {
 }
 
 .so-content-bg p {
-    font-size:24px;
+    font-size: 24px;
     font-weight: 600;
     font-family: 'Aller Light';
     letter-spacing: 0.1rem;
@@ -790,7 +792,7 @@ body {
 }
 
 .v-content-bg p {
-    font-size:24px;
+    font-size: 24px;
     font-weight: 600;
     font-family: 'Aller Light';
     letter-spacing: 0.1rem;
@@ -808,7 +810,7 @@ body {
 
 
 .mo-content-bg p {
-    font-size:24px;
+    font-size: 24px;
     font-weight: 600;
     font-family: 'Aller Light';
     letter-spacing: 0.1rem;
@@ -871,7 +873,7 @@ body {
     }
 
     .kd-content-bg p {
-      font-size: 20px;  
+        font-size: 20px;
     }
 
     .kd-content-bg,
@@ -901,7 +903,7 @@ body {
     }
 
     .kd-content-bg p {
-        font-size: 18px;  
+        font-size: 18px;
     }
 
     .kd-content-bg,
@@ -927,10 +929,9 @@ body {
     justify-content: center;
     background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
     align-items: center;
-    background-size: 100% 100%;
+    height: 100vh;
     /* Ensures vertical alignment */
-    height: 600px;
-}
+}   
 
 .contact-section {
     padding: 40px;
@@ -1006,6 +1007,13 @@ body {
     .send-btn {
         font-size: 16px;
         padding: 8px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contact-section{
+        
     }
 }
 
@@ -1103,7 +1111,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family:  Aller Regular;
+    font-family: Aller Regular;
 }
 
 .footer-column ul li a:hover {
@@ -1202,11 +1210,11 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
-    
+
     .footer {
 
-    padding: 10px !important ;
-}
+        padding: 10px !important;
+    }
 
     .footer-title {
         font-size: 18px;
@@ -1247,7 +1255,7 @@ body {
 
     .footer {
 
-        padding: 10px !important ;
+        padding: 10px !important;
     }
 
     .footer-column ul li a {

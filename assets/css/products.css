@@ -701,6 +701,10 @@ body {
         height: 300px;
         margin-top: 10px;
     }
+
+    .pure-product-main img {
+        display: none;
+    }
 }
 
 
