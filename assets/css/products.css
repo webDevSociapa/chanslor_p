@@ -714,7 +714,7 @@ body {
     justify-content: center;
     background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
     align-items: center; /* Ensures vertical alignment */
-    height: 600px;
+    height: 100vh;
 }
 
 .contact-section {

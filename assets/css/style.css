@@ -1013,7 +1013,7 @@ body {
 
 @media (max-width: 480px) {
     .contact-section{
-        
+
     }
 }
 
@@ -1214,6 +1214,8 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -100px;
+
     }
 
     .footer-title {
@@ -1256,6 +1258,7 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -100px;
     }
 
     .footer-column ul li a {
