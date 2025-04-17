@@ -256,9 +256,17 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: -100px;
-    transition: background-image 1s ease-in-out;
-}
+    transition: all 1s ease-out;}
 
+
+    #slide-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit to 3 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
 
 .hero-content {
     position: absolute;
@@ -312,15 +320,11 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    transition: all 1s ease-out;}
 
 .dot.active {
     background-color: #ffffff;
 }
-
-
-
 
 /* Responsiveness */
 
