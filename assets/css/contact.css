@@ -239,6 +239,14 @@ body {
 }
 
 
+.products-image img {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    max-width: 450px;
+}
+
+
 /*  */
 .contact-hero-section {
     background: url('/assets/imgs/contactus-Banner.jpg') no-repeat center/cover;
@@ -253,11 +261,23 @@ body {
     .contact-hero-section {
         height: 400px;
     }
+
+    .products-image img {
+        width: 80%;
+        margin-top: 30px;
+        border: 2px solid;
+    }
 }
 
 @media (max-width: 468px) {
     .contact-hero-section {
         height: 300px;
+    }
+
+    .products-image img {
+        display: none;
+        border: 2px solid red;
+
     }
 }
 
