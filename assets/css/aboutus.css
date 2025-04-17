@@ -321,8 +321,6 @@ body {
         width: 100%;
         margin-left: -5%;
     }
-
-   
 }
 
 
@@ -332,11 +330,10 @@ body {
         padding: 10px 20px;
     }
 
-    .about-product  {
+    .about-product {
         margin-top: 20px !important;
     }
 
- 
 
     .about-product-title h1 {
         font-size: 22px;
@@ -562,7 +559,9 @@ body {
 
 
 .product-box1 {
-    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6));
+    background: linear-gradient(to right,
+            #3b0101,
+            #fd9e9e);
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -575,12 +574,10 @@ body {
 }
 
 .product-box2 {
-    background: linear-gradient(
-        to right,
-        rgba(253, 85, 4, 0.2),
-        #f9cca7
-      );
-          border-radius: 10px;
+    background: linear-gradient(to right,
+            rgba(253, 85, 4, 0.2),
+            #f9cca7);
+    border-radius: 10px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -592,12 +589,10 @@ body {
 }
 
 .product-box3 {
-    background: linear-gradient(
-        to right,
-        rgba(3, 140, 68, 0.2),
-        #9bcc5b
-      );
-          border-radius: 10px;
+    background: linear-gradient(to right,
+            rgba(3, 140, 68, 0.2),
+            #9bcc5b);
+    border-radius: 10px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -607,7 +602,7 @@ body {
 }
 
 .product-box4 {
-    background: linear-gradient(to bottom, rgb(250, 201, 163,0.2), rgb(250, 201, 163,0.6), rgb(250, 201, 163,0.6));
+    background: linear-gradient(to bottom, rgb(250, 201, 163, 0.2), rgb(250, 201, 163, 0.6), rgb(250, 201, 163, 0.6));
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -894,7 +889,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family:  Aller Regular;
+    font-family: Aller Regular;
 }
 
 .footer-column ul li a:hover {
@@ -993,11 +988,11 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
-    
+
     .footer {
 
-    padding: 10px !important ;
-}
+        padding: 10px !important;
+    }
 
     .footer-title {
         font-size: 18px;
@@ -1036,7 +1031,7 @@ body {
     }
 
     .footer {
-        padding: 10px !important ;
+        padding: 10px !important;
     }
 
     .footer-column ul li a {
