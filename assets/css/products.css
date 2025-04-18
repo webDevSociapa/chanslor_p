@@ -251,6 +251,7 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: -100px;
+    height: 800px;
 }
 /*  Product Bg  */
 
@@ -800,6 +801,7 @@ body {
     padding: 6px 10px;
     position: relative;
     color: black;
+    margin-top: -225px;
 }
 
 .footer-container {
@@ -812,7 +814,7 @@ body {
     padding: 20px;
     position: relative;
     margin-top: 320px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 }
 
 
@@ -870,10 +872,13 @@ body {
 .footer-column ul {
     list-style: none;
     padding: 0;
+    font-family: Aller Regular;
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
+    font-family: Aller Regular;
+
 }
 
 .footer-column ul li a {
@@ -882,7 +887,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family:  Aller Regular;
+    font-family: Aller Regular;
 }
 
 .footer-column ul li a:hover {
@@ -913,6 +918,11 @@ body {
 
     .footer-title {
         font-size: 24px;
+    }
+
+    .footer {
+        margin-top: -150px;
+
     }
 }
 
@@ -981,11 +991,13 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
-    
+
     .footer {
 
-    padding: 10px !important ;
-}
+        padding: 10px !important;
+        margin-top: -100px;
+
+    }
 
     .footer-title {
         font-size: 18px;
@@ -1026,7 +1038,8 @@ body {
 
     .footer {
 
-        padding: 10px !important ;
+        padding: 10px !important;
+        margin-top: -100px;
     }
 
     .footer-column ul li a {
