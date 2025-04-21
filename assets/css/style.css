@@ -782,11 +782,13 @@ body {
   .v-content-bg p,
   .mo-content-bg p {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: Aller light;
     letter-spacing: 0.05rem;
-    text-transform: capitalize;
-    line-height: 1.6;
+    line-height: 1.4;
+    letter-spacing: .08em;
+
+
   }
   
   @media (max-width: 992px) {
@@ -1022,15 +1024,21 @@ body {
 
 }
 
+
+.corporate-office p {
+    font-family: 'Aller light';
+}
+
+
 .footer-column ul {
     list-style: none;
     padding: 0;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 
 }
 
@@ -1040,7 +1048,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li a:hover {
@@ -1158,7 +1166,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
     }
 
@@ -1184,7 +1192,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
 
     }
@@ -1206,4 +1214,8 @@ body {
     .legal2 {
         text-align: center;
     }
+}
+
+.heading-links {
+    font-size: 16px;
 }
