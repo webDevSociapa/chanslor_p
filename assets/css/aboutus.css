@@ -824,7 +824,7 @@ body {
     padding: 20px;
     position: relative;
     margin-top: 320px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 }
 
 
@@ -879,13 +879,22 @@ body {
 
 }
 
+
+.corporate-office p {
+    font-family: 'Aller light';
+}
+
+
 .footer-column ul {
     list-style: none;
     padding: 0;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
+    font-family: 'Aller light';
+
 }
 
 .footer-column ul li a {
@@ -894,7 +903,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li a:hover {
@@ -925,6 +934,11 @@ body {
 
     .footer-title {
         font-size: 24px;
+    }
+
+    .footer {
+        margin-top: -150px;
+
     }
 }
 
@@ -997,6 +1011,8 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -100px;
+
     }
 
     .footer-title {
@@ -1005,7 +1021,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
     }
 
@@ -1031,12 +1047,15 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
+
     }
 
     .footer {
+
         padding: 10px !important;
+        margin-top: -100px;
     }
 
     .footer-column ul li a {
@@ -1050,4 +1069,8 @@ body {
     .legal2 {
         text-align: center;
     }
+}
+
+.heading-links {
+    font-size: 16px;
 }

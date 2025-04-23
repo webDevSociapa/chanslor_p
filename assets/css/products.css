@@ -238,8 +238,6 @@ body {
 
 }
 
-
-
 /* Product Bg */
 
 .product-bg {
@@ -321,8 +319,6 @@ body {
 }
 
 /* Products Pages */
-
-
 .products-section {
     display: flex;
     justify-content: space-between;
@@ -345,11 +341,8 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
-
-
 .box-two {
     margin-top: 30px;
-
 }
 
 .box-four {
@@ -422,9 +415,6 @@ body {
         display: none;
     }
 }
-
-
-
 
 
 /* Section Background & Layout */
@@ -520,7 +510,7 @@ body {
 .taste-product-main-image img {
     width: 100%;
     /* height: 800px; */
-    margin-top: 10px;
+    margin-top: 30px;
     object-fit: cover;
     height: 780px;
 }
@@ -607,10 +597,12 @@ body {
     }
     .product-part2 {
         width: 100%;
-        height: 280px;
+        height: 190px;
         margin-left: -150px;
         z-index: 1;
-    }
+        margin-top: 8px !important;
+    } 
+
     .pure-product-main{
         flex-direction: row;
         gap: 20px;
