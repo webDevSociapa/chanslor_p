@@ -118,7 +118,6 @@
       <span class="dot" data-index="1"></span>
       <span class="dot" data-index="2"></span>
       <span class="dot" data-index="3"></span>
-      <span class="dot" data-index="4"></span>
     </div>
   </div>
 
@@ -131,24 +130,30 @@
   const slides = [
     {
       image: "/assets/imgs/homeBanner100.jpg",
+      mobileImage: "/assets/imgs/mobileview01.png",
       title: "Kachi Ghani Pure Mustard Oil",
       description: "Made from the finest mustard seeds, this cold-pressed oil retains natural antioxidants and a rich, bold flavor to enhance your traditional recipes.",
       buttonText: "About us"
     },
     {
       image: "/assets/imgs/homeBanner200.jpg",
+      mobileImage: "/assets/imgs/mobileview03.png",
+
       title: "Mustard Oil",
       description: "Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking while promoting heart health and immunity.",
       buttonText: "About us"
     },
     {
       image: "/assets/imgs/homeBanner300.jpg",
+      mobileImage: "/assets/imgs/mobileview05.png",
+
       title: "Vanaspati Safed & Danedaar Oil",
       description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
       buttonText: "About us"
     },
     {
       image: "/assets/imgs/homeBanner400.jpg",
+      mobileImage: "/assets/imgs/mobileview01.png",
       title: "Refined Soyabean Oil",
       description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
       buttonText: "About us"
@@ -159,23 +164,24 @@
   let sliderInterval;
 
   function showSlide(index) {
-    const slide = slides[index];
+  const slide = slides[index];
+  const isMobile = window.innerWidth <= 768; // You can adjust this value as needed
+  const backgroundImage = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
 
-    // Optional: smooth fade effect
-    banner.classList.add("fade-out");
+  banner.classList.add("fade-out");
 
-    setTimeout(() => {
-      banner.style.backgroundImage = `url('${slide.image}')`;
-      document.getElementById("slide-title").textContent = slide.title;
-      document.getElementById("slide-description").textContent = slide.description;
-      document.getElementById("slide-button").textContent = slide.buttonText;
+  setTimeout(() => {
+    banner.style.backgroundImage = `url('${backgroundImage}')`;
+    document.getElementById("slide-title").textContent = slide.title;
+    document.getElementById("slide-description").textContent = slide.description;
+    document.getElementById("slide-button").textContent = slide.buttonText;
 
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
 
-      banner.classList.remove("fade-out");
-    }, 300);
-  }
+    banner.classList.remove("fade-out");
+  }, 300);
+}
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
@@ -276,7 +282,6 @@
           <div class="kd-content-bg">
             <p>
             For generations, Kachi Ghani Mustard Oil has been a staple in Indian kitchens, known for its cold-pressed extraction method that preserves its natural pungency and rich antioxidants. Unlike refined oils, it retains essential nutrients, making it ideal for deep frying, pickling, and traditional cooking. Its antibacterial properties and heart-friendly benefits make it a healthier choice for everyday use.</p>
-  
             </p>
           </div>
         </div>
@@ -307,8 +312,6 @@
           <div class="v-content-bg">
             <p>
               A modern kitchen essential, refined soybean oil blends health and versatility, making it a preferred choice over heavier oils. Unlike traditional cooking oils, it is light, neutral in taste, and enriched with Omega-3 and Vitamin E, supporting heart health and digestion. Its high smoking point makes it perfect for everything from sautéing to deep frying, ensuring your meals remain nutritious without compromising on flavor.
-  
-  
             </p>
           </div>
         </div>
