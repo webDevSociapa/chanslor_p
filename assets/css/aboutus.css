@@ -551,6 +551,12 @@ body {
     color: #fff;
 }
 
+.about-product-list-content a {
+    text-decoration: none;
+    color: inherit; /* Optional: ensures it uses the same color as the rest of the text */
+}
+
+
 
 
 

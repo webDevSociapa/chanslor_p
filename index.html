@@ -126,6 +126,7 @@
 <script>
   const banner = document.getElementById("hero-banner");
   const dots = document.querySelectorAll(".dot");
+  const aboutButton = document.getElementById("slide-button");
 
   const slides = [
     {
@@ -138,7 +139,6 @@
     {
       image: "/assets/imgs/homeBanner200.jpg",
       mobileImage: "/assets/imgs/mobileview03.png",
-
       title: "Mustard Oil",
       description: "Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking while promoting heart health and immunity.",
       buttonText: "About us"
@@ -146,7 +146,6 @@
     {
       image: "/assets/imgs/homeBanner300.jpg",
       mobileImage: "/assets/imgs/mobileview05.png",
-
       title: "Vanaspati Safed & Danedaar Oil",
       description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
       buttonText: "About us"
@@ -164,24 +163,24 @@
   let sliderInterval;
 
   function showSlide(index) {
-  const slide = slides[index];
-  const isMobile = window.innerWidth <= 768; // You can adjust this value as needed
-  const backgroundImage = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
+    const slide = slides[index];
+    const isMobile = window.innerWidth <= 768;
+    const backgroundImage = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
 
-  banner.classList.add("fade-out");
+    banner.classList.add("fade-out");
 
-  setTimeout(() => {
-    banner.style.backgroundImage = `url('${backgroundImage}')`;
-    document.getElementById("slide-title").textContent = slide.title;
-    document.getElementById("slide-description").textContent = slide.description;
-    document.getElementById("slide-button").textContent = slide.buttonText;
+    setTimeout(() => {
+      banner.style.backgroundImage = `url('${backgroundImage}')`;
+      document.getElementById("slide-title").textContent = slide.title;
+      document.getElementById("slide-description").textContent = slide.description;
+      document.getElementById("slide-button").textContent = slide.buttonText;
 
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
 
-    banner.classList.remove("fade-out");
-  }, 300);
-}
+      banner.classList.remove("fade-out");
+    }, 300);
+  }
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
@@ -189,28 +188,34 @@
   }
 
   function startSlider() {
-    sliderInterval = setInterval(nextSlide, 9000); // Auto-slide every 3s
+    sliderInterval = setInterval(nextSlide, 9000);
   }
 
   function stopSlider() {
     clearInterval(sliderInterval);
   }
 
-  // Click on dots
+  // Dot click events
   dots.forEach(dot => {
     dot.addEventListener("click", () => {
       const index = parseInt(dot.getAttribute("data-index"));
       currentIndex = index;
       showSlide(currentIndex);
-      stopSlider();      // Optional: stop auto when dot clicked
-      startSlider();     // and restart it
+      stopSlider();
+      startSlider();
     });
+  });
+
+  // Redirect on About button click
+  aboutButton.addEventListener("click", () => {
+    window.location.href = "aboutus.html";
   });
 
   // Initialize
   showSlide(currentIndex);
   startSlider();
 </script>
+
 
   <!-- Script of Slider Banner -->
 
