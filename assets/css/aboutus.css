@@ -18,7 +18,7 @@ body {
     color: white;
     font-size: 20px;
     font-weight: 400;
-    font-family: 'poppins';
+    font-family: Aller Regular;
     margin-left: 45px;
     padding-left: 75px !important;
     margin-bottom: 35px;
@@ -65,7 +65,7 @@ body {
 .navbar-nav .dropdown-item {
     color: white;
     font-size: 16px;
-    font-family: 'Poppins';
+    font-family: Aller Regular;
     padding: 10px 20px;
 }
 
@@ -239,7 +239,7 @@ body {
 }
 
 .about-banner-container {
-    background: url('/assets/imgs/NewAboutMain.jpg') no-repeat center/cover;
+    background: url('/assets/imgs/aboutFitBanner.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,10 +263,6 @@ body {
     }
 }
 
-
-
-
-
 .about-product {
     background: #090909;
     padding: 20px 20px;
@@ -288,10 +284,10 @@ body {
 
 .about-product-desc p {
     color: #fff;
-    font-family: Aller Regular;
+    font-family: Aller light;
     font-size: 18px;
-    letter-spacing: 1.5px;
-    line-height: 1.6;
+    letter-spacing: .08em;
+    line-height: 1.4;
 }
 
 /* Image Styling */
@@ -394,7 +390,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    font-family: Aller Regular;
+    font-family: Aller light;
 }
 
 .about-quality-content {
@@ -512,7 +508,7 @@ body {
 
 .about-product-list-title {
     color: #D82127;
-    font-family: "Copperplate Gothic Bold";
+    font-family: Aller Bold;
     font-size: 50px;
     font-weight: bold;
     display: flex;
@@ -655,7 +651,7 @@ body {
 
 .product-list-box1 h3 {
     margin-top: 20px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
     letter-spacing: 6%;
 }
 
@@ -828,7 +824,7 @@ body {
     padding: 20px;
     position: relative;
     margin-top: 320px;
-    font-family: DIN Pro;
+    font-family: Aller Bold;
 }
 
 
@@ -883,13 +879,22 @@ body {
 
 }
 
+
+.corporate-office p {
+    font-family: 'Aller light';
+}
+
+
 .footer-column ul {
     list-style: none;
     padding: 0;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
+    font-family: 'Aller light';
+
 }
 
 .footer-column ul li a {
@@ -898,7 +903,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li a:hover {
@@ -929,6 +934,11 @@ body {
 
     .footer-title {
         font-size: 24px;
+    }
+
+    .footer {
+        margin-top: -150px;
+
     }
 }
 
@@ -1001,6 +1011,8 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -100px;
+
     }
 
     .footer-title {
@@ -1009,7 +1021,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
     }
 
@@ -1035,12 +1047,15 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
+
     }
 
     .footer {
+
         padding: 10px !important;
+        margin-top: -100px;
     }
 
     .footer-column ul li a {
@@ -1054,4 +1069,8 @@ body {
     .legal2 {
         text-align: center;
     }
+}
+
+.heading-links {
+    font-size: 16px;
 }
