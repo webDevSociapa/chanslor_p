@@ -253,7 +253,7 @@ body {
     background-position: bottom;
     position: relative;
     overflow: hidden;
-    margin-top: -100px;
+    margin-top: -88px;
     transition: all 1s ease-out;
 }
 
@@ -496,6 +496,7 @@ body {
         height: 6px;
     }
 }
+
 /* Responsiveness */
 
 
@@ -704,9 +705,9 @@ body {
     background: #000000;
     overflow: hidden;
     padding: 40px 0;
-  }
-  
-  .products-title {
+}
+
+.products-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -719,67 +720,70 @@ body {
     margin-bottom: 30px;
     flex-wrap: wrap;
     text-align: center;
-  }
-  
-  .products-title span {
+}
+
+.products-title span {
     font-size: 65px;
     margin-top: -12px;
-  }
-  
-  .products-title::before,
-  .products-title::after {
+}
+
+.products-title::before,
+.products-title::after {
     content: "";
     height: 25px;
     background-repeat: no-repeat;
     background-size: contain;
-  }
-  
-  .products-title::before {
+}
+
+.products-title::before {
     width: 18%;
     background-image: url('http://localhost/Chancellor/assets/imgs/left-arrow.png');
     margin-right: 15px;
-  }
-  
-  .products-title::after {
+}
+
+.products-title::after {
     width: 17%;
     background-image: url('http://localhost/Chancellor/assets/imgs/right-arrow.png');
     margin-left: 75px;
-  }
-  
-  .product-img {
+}
+
+.product-img {
     width: 100%;
     max-width: 500px;
     height: auto;
-  }
-  
-  /* Common style for all content boxes */
-  .kd-content-bg,
-  .so-content-bg,
-  .v-content-bg,
-  .mo-content-bg {
+}
+
+/* Common style for all content boxes */
+.kd-content-bg,
+.so-content-bg,
+.v-content-bg,
+.mo-content-bg {
     padding: 20px;
     border: 1px solid #501A1B;
     border-radius: 10px;
     color: #ffffff;
-  }
-  
-  .kd-content-bg {
+}
+
+.kd-content-bg {
     background: linear-gradient(104.97deg, rgba(216, 33, 39, 0.3), rgba(31, 31, 31, 0.3));
-  }
-  .so-content-bg {
+}
+
+.so-content-bg {
     background: linear-gradient(104.97deg, rgba(1, 160, 76, 0.3), rgba(31, 31, 31, 0.3));
-  }
-  .v-content-bg {
+}
+
+.v-content-bg {
     background: linear-gradient(104.97deg, rgba(35, 143, 233, 0.3), rgba(31, 31, 31, 0.3));
-  }
-  .mo-content-bg {
+}
+
+.mo-content-bg {
     background: linear-gradient(104.97deg, rgba(242, 100, 0, 0.3), rgba(31, 31, 31, 0.3));
-  }
-  
-  .kd-content-bg p,
-  .so-content-bg p,
-  .v-content-bg p,
-  .mo-content-bg p {
+}
+
+.kd-content-bg p,
+.so-content-bg p,
+.v-content-bg p,
+.mo-content-bg p {
     font-size: 22px;
     font-weight: 500;
     font-family: Aller light;
@@ -788,68 +792,77 @@ body {
     letter-spacing: .08em;
 
 
-  }
-  
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
     .products-title {
-      font-size: 36px;
-      letter-spacing: 0.3rem;
+        font-size: 36px;
+        letter-spacing: 0.3rem;
     }
+
     .products-title span {
-      font-size: 48px;
-      margin-top: -6px;
+        font-size: 48px;
+        margin-top: -6px;
     }
+
     .products-title::before,
     .products-title::after {
-      display: none;
+        display: none;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .products-title {
-      font-size: 30px;
+        font-size: 30px;
     }
+
     .products-title span {
-      font-size: 40px;
+        font-size: 40px;
     }
+
     .kd-content-bg,
     .so-content-bg,
     .v-content-bg,
     .mo-content-bg {
-      padding: 25px;
+        padding: 25px;
     }
+
     .product-img {
-      width: 100%;
+        width: 100%;
     }
+
     .kd-content-bg p,
     .so-content-bg p,
     .v-content-bg p,
     .mo-content-bg p {
-      font-size: 18px;
+        font-size: 18px;
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .products-title {
-      font-size: 24px;
+        font-size: 24px;
     }
+
     .products-title span {
-      font-size: 32px;
+        font-size: 32px;
     }
+
     .kd-content-bg,
     .so-content-bg,
     .v-content-bg,
     .mo-content-bg {
-      padding: 20px;
+        padding: 20px;
     }
+
     .kd-content-bg p,
     .so-content-bg p,
     .v-content-bg p,
     .mo-content-bg p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
+}
+
 
 /* contact section by Robin */
 .contact-container {
@@ -860,7 +873,7 @@ body {
     align-items: center;
     height: 100vh;
     /* Ensures vertical alignment */
-}   
+}
 
 .contact-section {
     padding: 40px;
@@ -941,9 +954,7 @@ body {
 
 
 @media (max-width: 480px) {
-    .contact-section{
-
-    }
+    .contact-section {}
 }
 
 
