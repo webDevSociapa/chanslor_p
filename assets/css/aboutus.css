@@ -1,5 +1,5 @@
 body {
-    background-color: #080808;
+    background-color: #000000;
     color: white;
 }
 
@@ -306,6 +306,7 @@ body {
     font-size: 18px;
     letter-spacing: .08em;
     line-height: 1.4;
+    text-align: justify;
 }
 
 /* Image Styling */
@@ -369,7 +370,7 @@ body {
 
     .about-product1-image,
     .about-product2-image {
-        margin-top: 120px;
+        margin-top: 25px;
     }
 
 }
@@ -883,7 +884,7 @@ body {
 
 
 .corporate-office {
-    text-align: left;
+    /* text-align: left; */
 }
 
 .quick-links {
@@ -997,11 +998,16 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
+        /* columns: 2px !important; */
         flex-direction: column;
         align-items: center;
         /* This centers all children horizontally */
         text-align: center;
         /* This centers text inside each column */
+    }
+
+    .footer{
+        padding-top: 0px;
     }
 
     .footer-column,
@@ -1035,7 +1041,6 @@ body {
     .footer {
 
         padding: 10px !important;
-        margin-top: -100px;
 
     }
 

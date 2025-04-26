@@ -1,5 +1,5 @@
 body {
-    background-color: #080808;
+    background-color: #000000;
     color: white;
 }
 
@@ -862,8 +862,10 @@ body {
     min-width: 280px;
 
 }
+
+
 .corporate-office {
-    text-align: left;
+    /* text-align: left; */
 }
 
 .quick-links {
@@ -883,15 +885,21 @@ body {
 
 }
 
+
+.corporate-office p {
+    font-family: 'Aller light';
+}
+
+
 .footer-column ul {
     list-style: none;
     padding: 0;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 
 }
 
@@ -901,7 +909,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    font-family: Aller Regular;
+    font-family: 'Aller light';
 }
 
 .footer-column ul li a:hover {
@@ -971,11 +979,16 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
+        /* columns: 2px !important; */
         flex-direction: column;
         align-items: center;
         /* This centers all children horizontally */
         text-align: center;
         /* This centers text inside each column */
+    }
+
+    .footer{
+        padding-top: 0px;
     }
 
     .footer-column,
@@ -1009,7 +1022,6 @@ body {
     .footer {
 
         padding: 10px !important;
-        margin-top: -100px;
 
     }
 
@@ -1019,7 +1031,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
     }
 
@@ -1045,7 +1057,7 @@ body {
 
     .footer-column {
         flex: 1;
-        font-family: DIN Pro;
+        font-family: 'Aller light';
         text-align: center;
 
     }
@@ -1067,4 +1079,8 @@ body {
     .legal2 {
         text-align: center;
     }
+}
+
+.heading-links {
+    font-size: 16px;
 }
