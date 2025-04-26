@@ -358,7 +358,7 @@ body {
 
 @media(max-width:1024px) {
     .hero-container {
-        height: 90vh;
+        /* height: 90vh; */
         margin-top: -70px;
     }
 
@@ -393,8 +393,9 @@ body {
 
 @media (max-width: 768px) {
     .hero-container {
-        height: 80vh;
+        /* height: 80vh; */
         margin-top: -50px;
+        border: 2px solid;
     }
 
     .hero-content {
@@ -429,13 +430,11 @@ body {
 
 @media (max-width: 576px) {
     .hero-container {
-        height: 70vh;
         margin-top: -30px;
     }
 
     .hero-content {
-        top: 20%;
-        left: 40%;
+        top: 25%;
         transform: translate(-50%, -50%);
     }
 
@@ -450,6 +449,8 @@ body {
     .hero-btn {
         font-size: 14px;
         padding: 6px 20px;
+        margin-top: -10px;
+        
     }
 
     .hero-nav {
@@ -464,7 +465,7 @@ body {
 
 @media (max-width: 420px) {
     .hero-container {
-        height: 60vh;
+        /* height: 60vh; */
         margin-top: -20px;
     }
 
