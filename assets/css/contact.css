@@ -702,6 +702,7 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -250px;
 
     }
 
@@ -745,7 +746,7 @@ body {
     .footer {
 
         padding: 10px !important;
-        margin-top: -100px;
+        margin-top: -320px;
     }
 
     .footer-column ul li a {
