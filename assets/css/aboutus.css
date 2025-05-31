@@ -412,6 +412,8 @@ body {
     font-family: Aller light;
 }
 
+
+
 .about-quality-content {
     display: flex;
     justify-content: center;
@@ -505,6 +507,12 @@ body {
     .quality-box {
         width: 90%;
     }
+    /* .about-quality-title span {
+        font-family: Aller Bold !important;
+        letter-spacing: 2px;
+        font-size: 24px;
+    } */
+    
 }
 
 /*  Product list  */
@@ -1041,6 +1049,7 @@ body {
     .footer {
 
         padding: 10px !important;
+        margin-top: -250px;
 
     }
 
@@ -1084,7 +1093,7 @@ body {
     .footer {
 
         padding: 10px !important;
-        margin-top: -100px;
+        margin-top: -320px;
     }
 
     .footer-column ul li a {
