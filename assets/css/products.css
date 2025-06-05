@@ -1,22 +1,24 @@
 body {
-    background-color: #080808;
+    background-color: #000000;
     color: white;
 }
 
 .navbar {
-    background: #171717;
+    background: url("/assets/imgs/nav-bg.png") no-repeat center;
     background-size: contain;
-    height: 215px;
-    margin-top: -50px;
+    height: 190px;
+    background-size: 100% 100%;
+    margin-top: -40px;
     position: relative;
     z-index: 5;
+
 }
 
 .navbar-nav .nav-link {
     color: white;
     font-size: 20px;
     font-weight: 400;
-    font-family: 'poppins';
+    font-family: Aller Regular;
     margin-left: 45px;
     padding-left: 75px !important;
     margin-bottom: 35px;
@@ -28,8 +30,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 80px 20px;
-    font: 100;
+    padding: 10px 20px;
+
 }
 
 .navbar-brand {
@@ -52,18 +54,274 @@ body {
     color: #F4991A !important;
 }
 
-.product-bg{}
-
-/* .products-title{
-    font-family: Copperplate Gothic Bold;
-    color: #D82127;
+.navbar-nav .dropdown-menu {
+    background-color: #080808;
+    /* Match the navbar background */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-.products-desc{
-    margin: 0px 530px;
-    padding: 0px 20px;
-} */
+.navbar-nav .dropdown-item {
+    color: white;
+    font-size: 16px;
+    font-family: Aller Regular;
+    padding: 10px 20px;
+}
 
+.navbar-nav .dropdown-item:hover {
+    background-color: #F4991A;
+    /* Highlight color */
+    color: black;
+}
+
+.sidebar-menu {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 250px;
+}
+
+.sidebar-menu .offcanvas-body {
+    padding: 20px;
+}
+
+.sidebar-menu .list-group-item {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.sidebar-menu .list-group-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-menu .list-group-item:hover {
+    background: #F4991A;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.right-menu {
+    margin-left: 95px;
+}
+
+.top-bg {
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    left: 15%;
+    margin-top: -230px;
+}
+
+/* Mobile View: Center Logo */
+@media (max-width: 768px) {
+    .navbar {
+        background-size: 100% 35% !important;
+        margin-top: -85px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        z-index: 10;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        z-index: 11;
+    }
+
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+/* Optional: Limit logo size on small devices */
+.navbar-brand img {
+    max-height: 55px;
+    width: auto;
+}
+
+/* General Tweaks */
+.navbar-toggler {
+    border: none;
+    padding: 6px;
+}
+
+.navbar-toggler-icon {
+    width: 22px !important;
+    height: 22px !important;
+    filter: invert(1);
+}
+
+
+
+@media (max-width: 478px) {
+
+    /* Adjust Navbar Position */
+    .navbar-container {
+        margin-top: -40px;
+        margin-left: 0;
+    }
+
+    .navbar {
+        margin-top: -85px;
+        background-size: 100% 35% !important;
+    }
+
+    /* Reduce Menu Button (Toggler) Size */
+    .navbar-toggler {
+        border: none;
+        padding: 6px;
+        /* Reduce padding for a smaller button */
+    }
+
+    .navbar-toggler-icon {
+        width: 22px !important;
+        /* Reduce icon size */
+        height: 22px !important;
+        filter: invert(1);
+        /* Make it white */
+    }
+
+    /* Center Logo Properly */
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Move Toggler Button to the Right */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 40px;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Center the dropdown menu */
+    }
+
+    .navbar-brand img {
+        max-height: 45px;
+        width: auto;
+    }
+
+}
+
+/* Product Bg */
+
+.product-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
+}
+
+/*  Product Bg  */
+
+
+/* product main bg */
+
+/* Main Section */
+.product-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    /* Matches image background */
+    color: #fff;
+    position: relative;
+}
+
+/* Title Styling */
+.products-main-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff0000;
+    /* Red title */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+/* Description Styling */
+.products-main-desc {
+    font-size: 22px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    max-width: 800px;
+    font-family: DIN Pro;
+    margin: 0 auto 30px;
+}
+
+/* Product Image */
+.product-image img {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 570px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products-main-title {
+        font-size: 26px;
+    }
+
+    .products-main-desc {
+        font-size: 14px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-main-title {
+        font-size: 22px;
+    }
+
+    .products-main-desc {
+        font-size: 13px;
+    }
+}
+
+/* Products Pages */
 .products-section {
     display: flex;
     justify-content: space-between;
@@ -74,35 +332,27 @@ body {
     margin: auto;
 }
 
-/* Left Side: Content Grid */
 .products-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    width: 50%;
+    width: 70%;
 }
 
-/* Product Box Styling */
 .product-box {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* Unique Class Styles */
-/* .box-one { background-color: rgba(255, 255, 255, 0.1); }
-.box-two { background-color: rgba(255, 255, 255, 0.15); }
-.box-three { background-color: rgba(255, 255, 255, 0.2); }
-.box-four { background-color: rgba(255, 255, 255, 0.25); } */
-
 .box-two {
     margin-top: 30px;
-    
 }
 
-.box-four{
+.box-four {
     margin-top: 30px;
 }
+
 /* Product Box Images */
 .product-box img {
     width: 100px;
@@ -134,12 +384,767 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
     .products-content {
         grid-template-columns: 1fr;
         width: 100%;
     }
+
     .products-image img {
         width: 80%;
         margin-top: 30px;
     }
+}
+
+
+@media (max-width: 580px) {
+    .products-section {
+        padding: 20px;
+    }
+
+    .product-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-box h2 {
+        font-size: 16px;
+    }
+
+    .product-box p {
+        font-size: 12px;
+    }
+
+    .products-image img {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .products-section {
+        padding: 20px;
+    }
+
+    .product-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-box h2 {
+        font-size: 16px;
+    }
+
+    .product-box p {
+        font-size: 12px;
+    }
+
+    .products-image img {
+        display: none;
+    }
+}
+
+
+/* Section Background & Layout */
+.pure-taste-section {
+    background: #000000;
+    display: flex;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.pure-main-content {
+    background-color: #E17B33;
+    height: 250px;
+    width: 820px;
+    border-radius: 10px;
+}
+
+.pure-main-content h2 {
+    color: #D82228;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+.product-list-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-family: 'Georgia', serif;
+    /* or the one you’re using */
+}
+
+.product-list-item li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 20px;
+}
+
+.product-list-item .type {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+}
+
+.product-list-item .size {
+    font-size: 18px;
+}
+
+/* .product-left-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+
+.pure-product-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-part {
+    width: 280px;
+    height: 280px;
+    margin-right: -130px;
+    z-index: 1;
+
+}
+
+.product-part2 {
+    width: 260px;
+    height: 230px;
+    margin-left: -150px;
+    z-index: 1;
+}
+
+/* Container */
+.container-taste {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taste-product-main-image img {
+    width: 100%;
+    /* height: 800px; */
+    margin-top: 30px;
+    object-fit: cover;
+    height: 620px;
+}
+
+/* Title Section */
+.pure-taste-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: #D82127;
+    font-family: "Copperplate Gothic Bold";
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.title-text {
+    color: #D82127;
+    font-family: "Copperplate Gothic Bold";
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.pure-taste-title .arrow {
+    width: 90px;
+    height: auto;
+}
+
+/* Image Section */
+.pure-taste-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.pure-taste-image1 {
+    width: 80%;
+}
+
+.pure-taste-image {
+    object-fit: contain;
+    height: 1200px !important;
+    object-fit: cover;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 1024px) {
+
+    .title-text {
+        font-size: 40px;
+    }
+
+    .pure-taste-title .arrow {
+        width: 70px;
+    }
+
+    .pure-taste-image1 {
+        width: 100%;
+    }
+
+    .pure-taste-image {
+        width: 100%;
+    }
+
+    .pure-main-content {
+        width: 100%;
+    }
+
+    .taste-product-main-image img {
+        width: 100%;
+        height: 600px;
+        margin-top: 10px;
+    }
+
+    .product-part {
+        width: 100%;
+        height: 300px;
+        margin-right: -130px;
+        z-index: 1;
+    }
+
+    .product-part2 {
+        width: 100%;
+        height: 190px;
+        margin-left: -150px;
+        z-index: 1;
+        margin-top: 8px !important;
+    }
+
+    .pure-product-main {
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-text {
+        font-size: 30px;
+    }
+
+    .pure-taste-title .arrow {
+        width: 50px;
+    }
+
+    .pure-taste-image1 {
+        width: 100%;
+    }
+
+    .pure-taste-image {
+        width: 100%;
+    }
+
+    .pure-main-content {
+        width: 100%;
+    }
+
+    .product-part {
+        width: 100%;
+        height: 300px;
+        margin-right: -130px;
+        z-index: 1;
+    }
+
+    .product-part2 {
+        width: 100%;
+        height: 280px;
+        margin-left: -150px;
+        z-index: 1;
+    }
+
+    .taste-product-main-image img {
+        width: 100%;
+        height: 500px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-text {
+        font-size: 24px;
+    }
+
+    .pure-taste-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pure-taste-title .arrow {
+        width: 40px;
+    }
+
+    .pure-taste-image1 {
+        width: 100%;
+    }
+
+    .pure-taste-image {
+        width: 100%;
+    }
+
+    .pure-main-content {
+        width: 500px !important;
+    }
+
+    .product-part {
+        width: 150px;
+        height: 150px;
+        margin-top: 100px;
+        margin-right: -130px;
+        z-index: 1;
+    }
+
+    .product-part2 {
+        width: 150px;
+        height: 150px;
+        margin-top: 100px;
+
+        margin-left: -150px;
+        z-index: 1;
+    }
+
+    .taste-product-main-image img {
+        width: 100%;
+        height: 160px;
+        margin-top: 10px;
+    }
+
+    .pure-product-main img {
+        display: none;
+    }
+}
+
+
+.contact-container {
+    display: flex;
+    border: none;
+    justify-content: center;
+    background: url('/assets/imgs/contactnew02.png') no-repeat center/cover;
+    align-items: center;
+    /* Ensures vertical alignment */
+    height: 100vh;
+}
+
+.contact-section {
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.contact-title {
+    color: #D82127;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+.form-control {
+    width: 100%;
+    /* Ensures full width */
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #E5AA11;
+    border-radius: 0;
+    font-size: 18px;
+    color: #E5AA11;
+    box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-control:hover {
+    border-bottom: 2px solid #ffdc6a;
+    color: #E5AA11;
+    background-color: transparent;
+}
+
+.form-control::placeholder {
+    color: #ffdc6a;
+    opacity: 0.7;
+}
+
+.send-btn {
+    background: #E5AA11;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.send-btn:hover {
+    background: #D82127;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    .send-btn {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+}
+
+
+/* footer Section by Robin */
+
+.footer {
+    background: url('/assets/imgs/common-footer.png') no-repeat center/cover;
+    padding: 6px 10px;
+    position: relative;
+    color: black;
+    margin-top: -225px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    margin-top: 320px;
+    font-family: Aller Bold;
+}
+
+
+
+.footer-logo {
+    position: absolute;
+    top: -80px;
+    left: -3px;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #D82127;
+    font-family: DIN Pro;
+    text-transform: uppercase;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+
+.footer-column {
+    flex: 1;
+    font-family: DIN Pro;
+    min-width: 280px;
+
+}
+
+
+.corporate-office {
+    /* text-align: left; */
+}
+
+.quick-links {
+    text-align: center;
+}
+
+.legal {
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: Aller Bold;
+
+}
+
+
+.corporate-office p {
+    font-family: 'Aller light';
+}
+
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Aller light';
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-family: 'Aller light';
+
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Aller light';
+}
+
+.footer-column ul li a:hover {
+    color: #D82127;
+}
+
+
+@media (max-width: 1200px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .footer-title {
+        font-size: 24px;
+    }
+
+    .footer {
+        margin-top: -150px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 480px;
+    }
+
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        /* columns: 2px !important; */
+        flex-direction: column;
+        align-items: center;
+        /* This centers all children horizontally */
+        text-align: center;
+        /* This centers text inside each column */
+    }
+
+    .footer {
+        padding-top: 0px;
+    }
+
+    .footer-column,
+    .footer-logo {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+    .footer-logo img {
+        max-width: 180px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+}
+
+@media(max-width: 576px) {
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+
+        padding: 10px !important;
+        margin-top: -250px;
+
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-column {
+        flex: 1;
+        font-family: 'Aller light';
+        text-align: center;
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+}
+
+/*  */
+
+@media(max-width: 420px) {
+    .footer-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-column {
+        flex: 1;
+        font-family: 'Aller light';
+        text-align: center;
+
+    }
+
+    .footer {
+
+        padding: 10px !important;
+        margin-top: -320px;
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .quick-links2 {
+        text-align: center;
+    }
+
+    .legal2 {
+        text-align: center;
+    }
+}
+
+.heading-links {
+    font-size: 16px;
+}
+
+
+/* WhatsApp Button */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn img {
+    width: 72px;
+    height: 72px;
+}
+
+/* Add social media Icons */
+.social-media-icons {
+    display: flex;
+    margin-left: 4px;
+    margin-top: 10px;
+    padding: 10px 30px;
+    justify-content: space-between;
+    gap: 14px;
+    transition: transform 0.3s ease;
+    box-shadow:
+        rgba(255, 193, 7, 0.7) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    cursor: pointer;
+}
+
+.social-media-icons:hover {
+    transform: scale(1.05);
+}
+
+.social-media-link {
+    text-decoration: none;
+    color: black;
 }

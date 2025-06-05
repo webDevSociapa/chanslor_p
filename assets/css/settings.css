@@ -1,0 +1,266 @@
+body {
+    background-color: #000000;
+    color: white;
+}
+
+.navbar {
+    background: url(/assets/imgs/new-bg02.png) no-repeat center;
+    background-size: contain;
+    height: 190px;
+    background-size: 100% 100%;
+    margin-top: -40px;
+    position: relative;
+    z-index: 5;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'poppins';
+    margin-left: 45px;
+    padding-left: 75px !important;
+    margin-bottom: 35px;
+}
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #F4991A !important;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #080808;
+    /* Match the navbar background */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins';
+    padding: 10px 20px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #F4991A;
+    /* Highlight color */
+    color: black;
+}
+
+.sidebar-menu {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 250px;
+}
+
+.sidebar-menu .offcanvas-body {
+    padding: 20px;
+}
+
+.sidebar-menu .list-group-item {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.sidebar-menu .list-group-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-menu .list-group-item:hover {
+    background: #F4991A;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.right-menu {
+    margin-left: 95px;
+}
+
+.top-bg {
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    left: 15%;
+    margin-top: -230px;
+}
+
+/* Mobile View: Center Logo */
+@media (max-width: 768px) {
+    .navbar {
+        background-size: 100% 35% !important;
+        margin-top: -85px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        z-index: 10;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        z-index: 11;
+    }
+
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+/* Optional: Limit logo size on small devices */
+.navbar-brand img {
+    max-height: 55px;
+    width: auto;
+}
+
+/* General Tweaks */
+.navbar-toggler {
+    border: none;
+    padding: 6px;
+}
+
+.navbar-toggler-icon {
+    width: 22px !important;
+    height: 22px !important;
+    filter: invert(1);
+}
+
+
+
+@media (max-width: 478px) {
+
+    /* Adjust Navbar Position */
+    .navbar-container {
+        margin-top: -40px;
+        margin-left: 0;
+    }
+
+    .navbar {
+        margin-top: -85px;
+        background-size: 100% 35% !important;
+    }
+
+    /* Reduce Menu Button (Toggler) Size */
+    .navbar-toggler {
+        border: none;
+        padding: 6px;
+        /* Reduce padding for a smaller button */
+    }
+
+    .navbar-toggler-icon {
+        width: 22px !important;
+        /* Reduce icon size */
+        height: 22px !important;
+        filter: invert(1);
+        /* Make it white */
+    }
+
+    /* Center Logo Properly */
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Move Toggler Button to the Right */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 40px;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Center the dropdown menu */
+    }
+
+    .navbar-brand img {
+        max-height: 45px;
+        width: auto;
+    }
+
+}
+
+
+/* WhatsApp Button */
+
+.whatsapp-btn {
+   position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn img {
+    width: 72px;
+    height: 72px;
+}
