@@ -452,7 +452,7 @@ body {
         font-size: 14px;
         padding: 6px 20px;
         margin-top: -10px;
-        
+
     }
 
     .hero-nav {
@@ -772,15 +772,16 @@ body {
 }
 
 .so-content-bg {
-    background: linear-gradient(104.97deg, rgba(1, 160, 76, 0.3), rgba(31, 31, 31, 0.3));
+    background: linear-gradient(104.97deg, rgba(242, 100, 0, 0.3), rgba(31, 31, 31, 0.3));
+
 }
 
 .v-content-bg {
-    background: linear-gradient(104.97deg, rgba(35, 143, 233, 0.3), rgba(31, 31, 31, 0.3));
+    background: linear-gradient(104.97deg, rgba(1, 160, 76, 0.3), rgba(31, 31, 31, 0.3));
 }
 
 .mo-content-bg {
-    background: linear-gradient(104.97deg, rgba(242, 100, 0, 0.3), rgba(31, 31, 31, 0.3));
+    background: linear-gradient(104.97deg, rgba(35, 143, 233, 0.3), rgba(31, 31, 31, 0.3));
 }
 
 .kd-content-bg p,
@@ -1139,7 +1140,7 @@ body {
         /* This centers text inside each column */
     }
 
-    .footer{
+    .footer {
         padding-top: 0px;
     }
 
@@ -1237,3 +1238,81 @@ body {
 .heading-links {
     font-size: 16px;
 }
+
+/* Whatsapp Button Add */
+
+/* .whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-btn img {
+  width: 72px;
+  height: 72px;
+} */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn img {
+    width: 72px;
+    height: 72px;
+}
+
+/* Add social media Icons */
+.social-media-icons {
+    display: flex;
+    margin-left: 4px;
+    margin-top: 10px;
+    padding: 10px 30px;
+    justify-content: space-between;
+    gap: 14px;
+    transition: transform 0.3s ease;
+    box-shadow:
+        rgba(255, 193, 7, 0.7) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    cursor: pointer;
+}
+
+.social-media-icons:hover {
+    transform: scale(1.05);
+}
+
+.social-media-link {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*  */

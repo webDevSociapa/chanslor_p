@@ -19,6 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
   <style>
     @font-face {
       font-family: 'Copperplate Gothic Std 29 AB';
@@ -122,99 +125,99 @@
   </div>
 
 
-<!-- Script of Slider Banner -->
-<script>
-  const banner = document.getElementById("hero-banner");
-  const dots = document.querySelectorAll(".dot");
-  const aboutButton = document.getElementById("slide-button");
+  <!-- Script of Slider Banner -->
+  <script>
+    const banner = document.getElementById("hero-banner");
+    const dots = document.querySelectorAll(".dot");
+    const aboutButton = document.getElementById("slide-button");
 
-  const slides = [
-    {
-      image: "/assets/imgs/poductBannerFix30.jpg",
-      mobileImage: "/assets/imgs/mobileview01.png",
-      title: "Kachi Ghani Pure Mustard Oil",
-      description: "Made from the finest mustard seeds, this cold-pressed oil retains natural antioxidants and a rich, bold flavor to enhance your traditional recipes.",
-      buttonText: "About us"
-    },
-    {
-      image: "/assets/imgs/poductBannerFix20.jpg",
-      mobileImage: "/assets/imgs/mobileview03.png",
-      title: "Mustard Oil",
-      description: "Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking while promoting heart health and immunity.",
-      buttonText: "About us"
-    },
-    {
-      image: "/assets/imgs/poductBannerFix40.jpg",
-      mobileImage: "/assets/imgs/mobileview05.png",
-      title: "Vanaspati Safed & Danedaar Oil",
-      description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
-      buttonText: "About us"
-    },
-    {
-      image: "/assets/imgs/productBannerFix10.jpg",
-      mobileImage: "/assets/imgs/mobileview01.png",
-      title: "Refined Soyabean Oil",
-      description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
-      buttonText: "About us"
+    const slides = [
+      {
+        image: "/assets/imgs/poductBannerFix30.jpg",
+        mobileImage: "/assets/imgs/mobileview01.png",
+        title: "Kachi Ghani Pure Mustard Oil",
+        description: "Made from the finest mustard seeds, this cold-pressed oil retains natural antioxidants and a rich, bold flavor to enhance your traditional recipes.",
+        buttonText: "About us"
+      },
+      {
+        image: "/assets/imgs/poductBannerFix20.jpg",
+        mobileImage: "/assets/imgs/mobileview03.png",
+        title: "Mustard Oil",
+        description: "Packed with essential nutrients, this mustard oil brings the authentic taste of home cooking while promoting heart health and immunity.",
+        buttonText: "About us"
+      },
+      {
+        image: "/assets/imgs/poductBannerFix40.jpg",
+        mobileImage: "/assets/imgs/mobileview05.png",
+        title: "Vanaspati Safed & Danedaar Oil",
+        description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
+        buttonText: "About us"
+      },
+      {
+        image: "/assets/imgs/productBannerFix10.jpg",
+        mobileImage: "/assets/imgs/mobileview01.png",
+        title: "Refined Soyabean Oil",
+        description: "With its grainy texture and rich aroma, this vanaspati oil ensures softer rotis, crispier fried snacks, and a delicious taste in every bite",
+        buttonText: "About us"
+      }
+    ];
+
+    let currentIndex = 0;
+    let sliderInterval;
+
+    function showSlide(index) {
+      const slide = slides[index];
+      const isMobile = window.innerWidth <= 768;
+      const backgroundImage = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
+
+      banner.classList.add("fade-out");
+
+      setTimeout(() => {
+        banner.style.backgroundImage = `url('${backgroundImage}')`;
+        document.getElementById("slide-title").textContent = slide.title;
+        document.getElementById("slide-description").textContent = slide.description;
+        document.getElementById("slide-button").textContent = slide.buttonText;
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+
+        banner.classList.remove("fade-out");
+      }, 300);
     }
-  ];
 
-  let currentIndex = 0;
-  let sliderInterval;
-
-  function showSlide(index) {
-    const slide = slides[index];
-    const isMobile = window.innerWidth <= 768;
-    const backgroundImage = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
-
-    banner.classList.add("fade-out");
-
-    setTimeout(() => {
-      banner.style.backgroundImage = `url('${backgroundImage}')`;
-      document.getElementById("slide-title").textContent = slide.title;
-      document.getElementById("slide-description").textContent = slide.description;
-      document.getElementById("slide-button").textContent = slide.buttonText;
-
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
-
-      banner.classList.remove("fade-out");
-    }, 300);
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }
-
-  function startSlider() {
-    sliderInterval = setInterval(nextSlide, 9000);
-  }
-
-  function stopSlider() {
-    clearInterval(sliderInterval);
-  }
-
-  // Dot click events
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-      const index = parseInt(dot.getAttribute("data-index"));
-      currentIndex = index;
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
       showSlide(currentIndex);
-      stopSlider();
-      startSlider();
+    }
+
+    function startSlider() {
+      sliderInterval = setInterval(nextSlide, 9000);
+    }
+
+    function stopSlider() {
+      clearInterval(sliderInterval);
+    }
+
+    // Dot click events
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-index"));
+        currentIndex = index;
+        showSlide(currentIndex);
+        stopSlider();
+        startSlider();
+      });
     });
-  });
 
-  // Redirect on About button click
-  aboutButton.addEventListener("click", () => {
-    window.location.href = "aboutus.html";
-  });
+    // Redirect on About button click
+    aboutButton.addEventListener("click", () => {
+      window.location.href = "aboutus.html";
+    });
 
-  // Initialize
-  showSlide(currentIndex);
-  startSlider();
-</script>
+    // Initialize
+    showSlide(currentIndex);
+    startSlider();
+  </script>
 
 
   <!-- Script of Slider Banner -->
@@ -277,7 +280,7 @@
   <section class="products-section mt-4">
     <h2 class="products-title"><span>O</span>ur &nbsp; <span>P</span>roducts</h2>
     <div class="container-fluid">
-      
+
       <!-- Product 1 -->
       <div class="row mt-5 align-items-center">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3 mb-md-0">
@@ -286,12 +289,15 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="kd-content-bg">
             <p>
-            For generations, Kachi Ghani Mustard Oil has been a staple in Indian kitchens, known for its cold-pressed extraction method that preserves its natural pungency and rich antioxidants. Unlike refined oils, it retains essential nutrients, making it ideal for deep frying, pickling, and traditional cooking. Its antibacterial properties and heart-friendly benefits make it a healthier choice for everyday use.</p>
+              For generations, Kachi Ghani Mustard Oil has been a staple in Indian kitchens, known for its cold-pressed
+              extraction method that preserves its natural pungency and rich antioxidants. Unlike refined oils, it
+              retains essential nutrients, making it ideal for deep frying, pickling, and traditional cooking. Its
+              antibacterial properties and heart-friendly benefits make it a healthier choice for everyday use.</p>
             </p>
           </div>
         </div>
       </div>
-  
+
       <!-- Product 2 -->
       <div class="row mt-5 align-items-center flex-md-row-reverse">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3 mb-md-0">
@@ -300,14 +306,17 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="so-content-bg">
             <p>
-             A time-honored cooking essential, mustard oil has been cherished across Indian households for its distinct sharpness and natural immunity-boosting properties. Unlike other oils, its high smoke point makes it perfect for high-heat cooking while its antimicrobial benefits support overall well-being. Its deep, bold flavor enhances the taste of curries, stir-fries, and marinades like no other.
-  
-  
+              A time-honored cooking essential, mustard oil has been cherished across Indian households for its distinct
+              sharpness and natural immunity-boosting properties. Unlike other oils, its high smoke point makes it
+              perfect for high-heat cooking while its antimicrobial benefits support overall well-being. Its deep, bold
+              flavor enhances the taste of curries, stir-fries, and marinades like no other.
+
+
             </p>
           </div>
         </div>
       </div>
-  
+
       <!-- Product 3 -->
       <div class="row mt-5 align-items-center">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3 mb-md-0">
@@ -316,12 +325,16 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="v-content-bg">
             <p>
-              A modern kitchen essential, refined soybean oil blends health and versatility, making it a preferred choice over heavier oils. Unlike traditional cooking oils, it is light, neutral in taste, and enriched with Omega-3 and Vitamin E, supporting heart health and digestion. Its high smoking point makes it perfect for everything from sautéing to deep frying, ensuring your meals remain nutritious without compromising on flavor.
+              A modern kitchen essential, refined soybean oil blends health and versatility, making it a preferred
+              choice over heavier oils. Unlike traditional cooking oils, it is light, neutral in taste, and enriched
+              with Omega-3 and Vitamin E, supporting heart health and digestion. Its high smoking point makes it perfect
+              for everything from sautéing to deep frying, ensuring your meals remain nutritious without compromising on
+              flavor.
             </p>
           </div>
         </div>
       </div>
-  
+
       <!-- Product 4 -->
       <div class="row mt-5 align-items-center flex-md-row-reverse">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3 mb-md-0">
@@ -330,17 +343,20 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="mo-content-bg">
             <p>
-              Rooted in Indian culinary traditions, Vanaspati oil is known for its signature grainy texture, making it unique from refined oils. Used for decades in making soft, flaky parathas, rich sweets, and crispy fried delights, it offers a distinct taste and consistency that other oils lack. Its ability to enhance the aroma and texture of food makes it an irreplaceable choice in festive and everyday cooking.
+              Rooted in Indian culinary traditions, Vanaspati oil is known for its signature grainy texture, making it
+              unique from refined oils. Used for decades in making soft, flaky parathas, rich sweets, and crispy fried
+              delights, it offers a distinct taste and consistency that other oils lack. Its ability to enhance the
+              aroma and texture of food makes it an irreplaceable choice in festive and everyday cooking.
             </p>
           </div>
         </div>
       </div>
-  
+
     </div>
   </section>
-  
-  
-  
+
+
+
 
   <!-- video section -->
   <section>
@@ -369,10 +385,12 @@
   <!-- footer -->
   <footer class="footer">
     <div class="footer-container">
+
       <!-- Logo Section (Top Left) -->
       <div class="footer-logo">
         <img src="/assets/imgs/chancellor-logo.png" />
       </div>
+
       <!-- Corporate Office Section (Left) -->
       <div class="footer-column corporate-office">
         <h3 class="footer-title">Corporate Office</h3>
@@ -402,9 +420,25 @@
           <li><a href="disclaimer.html">Disclaimer</a></li>
         </ul>
       </div>
+      <div class="data-group-logo">
+        <img src="/assets/imgs/dataoilLogo.png" alt="Data Group Logo" />
+        <div class="social-media-icons">
+          <a class="social-media-link" href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-media-link" href="facebook.com"><i class="fa-brands fa-facebook"></i></a>
+          <a class="social-media-link" href="twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
     </div>
   </footer>
   <!-- footer -->
+
+  <!-- WhatsApp Button -->
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/911442332922" class="whatsapp-btn" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="/assets/imgs/whatsappIcon.webp" alt="WhatsApp Icon" />
+  </a>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
