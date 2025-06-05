@@ -790,11 +790,11 @@ body {
     transform: scale(1.05);
 }
 
-.whatsapp-btn img {
-    width: 72px;
-    height: 72px;
-}
 
+.whatsapp-btn img {
+    width:100px;
+    height: 100px
+}
 
 /* Add social media Icons */
 .social-media-icons {
