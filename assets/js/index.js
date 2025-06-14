@@ -1,3 +1,5 @@
+// Add JS (index.js)
+
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelector('.slides');
     const dotsContainer = document.querySelector('.navigation');

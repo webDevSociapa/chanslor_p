@@ -507,12 +507,13 @@ body {
     .quality-box {
         width: 90%;
     }
+
     /* .about-quality-title span {
         font-family: Aller Bold !important;
         letter-spacing: 2px;
         font-size: 24px;
     } */
-    
+
 }
 
 /*  Product list  */
@@ -580,7 +581,8 @@ body {
 
 .about-product-list-content a {
     text-decoration: none;
-    color: inherit; /* Optional: ensures it uses the same color as the rest of the text */
+    color: inherit;
+    /* Optional: ensures it uses the same color as the rest of the text */
 }
 
 
@@ -752,7 +754,7 @@ body {
     align-items: center;
     height: 100vh;
     /* Ensures vertical alignment */
-}   
+}
 
 .contact-section {
     padding: 40px;
@@ -833,9 +835,7 @@ body {
 
 
 @media (max-width: 480px) {
-    .contact-section{
-
-    }
+    .contact-section {}
 }
 
 /* footer Section by Robin */
@@ -1001,8 +1001,6 @@ body {
     }
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
@@ -1014,7 +1012,7 @@ body {
         /* This centers text inside each column */
     }
 
-    .footer{
+    .footer {
         padding-top: 0px;
     }
 
@@ -1116,18 +1114,18 @@ body {
 /* WhatsApp Button */
 
 .whatsapp-btn {
-   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 999;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  width: 60px;
-  height: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    width: 60px;
+    height: 60px;
 }
 
 .whatsapp-btn:hover {
@@ -1136,7 +1134,7 @@ body {
 
 
 .whatsapp-btn img {
-    width:100px;
+    width: 100px;
     height: 100px
 }
 
@@ -1165,4 +1163,3 @@ body {
     text-decoration: none;
     color: black;
 }
-
