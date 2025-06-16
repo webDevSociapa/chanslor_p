@@ -526,6 +526,7 @@ body {
     width: 260px;
     height: 230px;
     margin-left: -150px;
+    margin-top: 4px;
     z-index: 1;
 }
 
