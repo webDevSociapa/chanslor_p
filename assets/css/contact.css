@@ -819,3 +819,17 @@ body {
     text-decoration: none;
     color: black;
 }
+
+
+
+.product-bg-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
+    height: 600px;
+}
