@@ -529,8 +529,25 @@ body {
     background: #000000;
     padding: 120px;
     overflow: hidden;
+    
+
 }
 
+/*  */
+.leftside-bg {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    z-index: 0;
+}
+
+.leftside-bg img {
+    object-fit: contain;
+    display: block;
+    
+}
 
 
 .brand-title {
