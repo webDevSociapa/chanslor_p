@@ -453,14 +453,14 @@ body {
     text-align: center;
 }
 
-.pure-main-content {
-    background-color: #E17B33;
+.pure-main-content-kachi {
+    background-color: #501A1B;
     height: 250px;
     width: 820px;
     border-radius: 10px;
 }
 
-.pure-main-content h2 {
+.pure-main-content-kachi h2 {
     color: #D82228;
     font-size: 30px;
     font-weight: bold;

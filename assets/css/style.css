@@ -325,7 +325,7 @@ body {
 @media(max-width:1280px) {
     .hero-container {
         height: 100vh;
-        
+
     }
 
     .hero-content {
@@ -391,8 +391,6 @@ body {
         height: 12px;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .hero-container {
@@ -531,7 +529,7 @@ body {
     background: #000000;
     padding: 120px;
     overflow: hidden;
-    
+
 
 }
 
@@ -548,7 +546,7 @@ body {
 .leftside-bg img {
     object-fit: contain;
     display: block;
-    
+
 }
 
 
@@ -617,8 +615,8 @@ body {
 
 .aboutus-section-subheading {
     font-family: 'Aller Light';
-        font-size: 20px;
-        letter-spacing: 0.2em;
+    font-size: 20px;
+    letter-spacing: 0.2em;
 
 }
 
@@ -1313,7 +1311,7 @@ body {
 }
 
 .whatsapp-btn img {
-    width:100px;
+    width: 100px;
     height: 100px
 }
 
