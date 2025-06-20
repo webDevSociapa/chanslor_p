@@ -454,13 +454,32 @@ body {
 }
 
 .pure-main-content-kachi {
-    background-color: #501A1B;
+    background-color: #9c1313;
     height: 250px;
     width: 820px;
     border-radius: 10px;
 }
 
 .pure-main-content-kachi h2 {
+    color: #300204;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+/*  */
+
+.pure-main-content-mustard {
+        background-color: #bb6722;
+
+    height: 250px;
+    width: 820px;
+    border-radius: 10px;
+}
+
+.pure-main-content-mustard h2 {
     color: #D82228;
     font-size: 30px;
     font-weight: bold;
@@ -468,6 +487,45 @@ body {
     margin-top: 20px;
     font-family: Copperplate Gothic Bold;
 }
+
+/*  */
+
+.pure-main-content-vanaspati {
+    background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6));
+    height: 250px;
+    width: 820px;
+    border-radius: 10px;
+}
+
+.pure-main-content-vanaspati h2 {
+    color: #D82228;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+
+/*  */
+
+.pure-main-content-soyabean {
+    background-color: #9bcc5b;
+    height: 250px;
+    width: 820px;
+    border-radius: 10px;
+}
+
+.pure-main-content-soyabean h2 {
+    color: #D82228;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: Copperplate Gothic Bold;
+}
+
+
 
 .product-list-item {
     list-style: none;
