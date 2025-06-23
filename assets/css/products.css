@@ -454,14 +454,15 @@ body {
 }
 
 .pure-main-content-kachi {
-    background-color: #9c1313;
-    height: 250px;
+ background: linear-gradient(to right,
+            #7c0505,
+            #f1eded);    height: 250px;
     width: 820px;
     border-radius: 10px;
 }
 
 .pure-main-content-kachi h2 {
-    color: #300204;
+    color: #D82228;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -472,7 +473,9 @@ body {
 /*  */
 
 .pure-main-content-mustard {
-        background-color: #bb6722;
+      background: linear-gradient(to right,
+            #bb6722,
+            #f9cca7);
 
     height: 250px;
     width: 820px;
