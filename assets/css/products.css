@@ -238,6 +238,8 @@ body {
 
 }
 
+
+
 /* Product Bg */
 
 .product-bg {
@@ -495,7 +497,7 @@ body {
 
 .pure-main-content-vanaspati {
     background: linear-gradient(to bottom, rgba(213, 232, 247, 0.6), rgba(160, 196, 231, 0.6), rgba(78, 127, 175, 0.6));
-    height: 250px;
+    height: 350px;
     width: 820px;
     border-radius: 10px;
 }
@@ -589,6 +591,14 @@ body {
     margin-left: -150px;
     margin-top: 4px;
     z-index: 1;
+}
+
+.vanaspati-table-image {
+    margin-top: 60px;
+}
+
+.vanaspati-table-image-1 {
+    margin-top: 14px;
 }
 
 /* Container */
